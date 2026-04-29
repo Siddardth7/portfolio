@@ -1,0 +1,12 @@
+# Source project directories (large, not needed for the live site)
+Portfolio Projects/
+Portfolio/
+.superpowers/
+
+# Old portfolio file
+index (1).html
+
+# Misc
+.DS_Store
+*.pdf.bak
+node_modules/
