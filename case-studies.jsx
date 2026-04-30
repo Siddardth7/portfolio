@@ -27,23 +27,13 @@ const DETAIL_PAGES = {
       { val: '20 psi', lbl: 'Pressure Hold Test' },
       { val: '0', lbl: 'Failures' },
     ],
-    images: [
-      { src: 'images/sampe/cad-model.png', caption: 'SolidWorks CAD model — fuselage cylinder design' },
-      { src: 'images/sampe/fabrication-1.jpg', caption: 'Prepreg layup on aluminum mandrel' },
-      { src: 'images/sampe/process-1.jpg', caption: 'Vacuum bag assembly and seal verification' },
-      { src: 'images/sampe/fabrication-2.jpg', caption: 'Blanket layup — the all-nighter redesign solution' },
-      { src: 'images/sampe/process-2.jpg', caption: 'Post-cure fuselage section inspection' },
-      { src: 'images/sampe/fabrication-3.jpg', caption: 'Final fuselage section after autoclave cure' },
-      { src: 'images/sampe/process-3.jpg', caption: 'Team preparing for MTS structural test' },
-      { src: 'images/sampe/testing.jpg', caption: 'Pressurized hold test at 20 psi' },
-      { src: 'images/sampe/process-4.jpg', caption: 'Three-point bending test — 2,700 lbf' },
-      { src: 'images/sampe/fabrication-4.jpg', caption: 'Waterjet cutout process' },
-      { src: 'images/sampe/cad-model-2.png', caption: 'Structural analysis — ply-drop optimization' },
-    ],
+    heroImage: { src: 'images/sampe/testing.jpg', caption: 'Team with finished fuselage at MTS testing machine' },
+    images: [],
     sections: [
       {
         title: 'What Was Built',
-        body: 'Manufactured a carbon fiber/epoxy composite fuselage cylinder (24"×6" OD) capable of withstanding 2,700 lbf in three-point bending using vacuum bagging and autoclave cure. Stacking sequence was optimized via Python simulated annealing and validated in ABAQUS FEA — achieving 38% deflection reduction versus the baseline [0/90]s schedule. Final build achieved first-article structural acceptance on the first attempt.',
+        body: 'Manufactured a composite fuselage cylinder (24"×6" OD) capable of withstanding 2,700 lbf in three-point bending using vacuum bagging and autoclave cure. Stacking sequence was optimized via Python simulated annealing and validated in ABAQUS FEA — achieving 38% deflection reduction versus the baseline [0/90]s schedule. Final build achieved first-article structural acceptance on the first attempt.',
+        image: { src: 'images/sampe/cad-model.png', caption: 'CAD model — SolidWorks' },
       },
       {
         title: 'The Challenge',
@@ -60,14 +50,23 @@ const DETAIL_PAGES = {
           '06 — Waterjet cutouts (4 structural cutouts) and surface finishing',
           '07 — MTS three-point bending test — 2,700 lbf sustained with <1" deflection',
         ],
+        gallery: [
+          { src: 'images/sampe/fabrication-1.jpg', caption: 'Nomex honeycomb core on aluminum mandrel' },
+          { src: 'images/sampe/fabrication-2.jpg', caption: 'Continuous prepreg blanket layup' },
+          { src: 'images/sampe/fabrication-3.jpg', caption: 'Vacuum-bagged part before autoclave cure' },
+        ],
       },
       {
         title: 'The Crisis & Solution',
-        body: 'At ply 10 of 14, a 3-inch circumferential gap appeared — the prepreg wouldn\'t close around the mandrel. Root cause: all plies had been cut to identical length, but increasing wall thickness meant each successive ply needed a longer circumference. The all-nighter redesign abandoned 14 individual wraps and created one continuous prepreg blanket with progressive ply lengths applied in a single roll. This eliminated delamination risk, maintained fiber continuity, and achieved perfect fit on the first re-attempt. The dual-blanket concept (7 inner + 7 outer plies) became the team\'s signature manufacturing innovation and was explicitly cited in the competition write-up.',
+        body: 'At ply 10 of 14, a 3-inch circumferential gap appeared — the prepreg wouldn\'t close around the mandrel. Root cause: all plies had been cut to identical length, but increasing wall thickness meant each successive ply needed a longer circumference. The all-nighter redesign abandoned 14 individual wraps and created one continuous prepreg blanket with progressive ply lengths applied in a single roll. This eliminated delamination risk, maintained fiber continuity, and achieved perfect fit on the first re-attempt.',
       },
       {
-        title: 'Results',
-        body: 'First-article structural acceptance on the first attempt. 2,700 lbf peak load with zero failures. 38% deflection reduction over the baseline schedule confirmed by ABAQUS FEA cross-validation. Zero void content defects detected on post-cure inspection.',
+        title: 'Testing & Results',
+        body: 'First-article structural acceptance on the first attempt. 2,700 lbf peak load with zero failures. 38% deflection reduction over the baseline schedule confirmed by ABAQUS FEA cross-validation.',
+        gallery: [
+          { src: 'images/sampe/process-1.jpg', caption: 'Finished composite cylinder — post-cure inspection' },
+          { src: 'images/sampe/process-2.jpg', caption: 'MTS three-point bending test — 2,700 lbf' },
+        ],
       },
     ],
     skills: ['Prepreg Layup', 'Vacuum Bagging', 'Autoclave Operation', 'pFMEA', 'ABAQUS FEA', 'Classical Lamination Theory', 'Python · Simulated Annealing', 'ASME GD&T', 'Process Documentation'],
@@ -310,12 +309,8 @@ const DETAIL_PAGES = {
       { val: 'SA', lbl: 'Stacking Optimizer' },
       { val: 'ABD', lbl: 'Full Matrix Output' },
     ],
-    images: [
-      { src: 'images/composite/laminate-stack.png', caption: 'ABD matrix stiffness by ply angle — [0/±45/90]s on IM7/8552' },
-      { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison (<1% error)' },
-      { src: 'images/composite/failure-indices.png', caption: 'Tsai-Wu and Hashin failure index map across ply angles' },
-      { src: 'images/composite/angle-sweep.png', caption: 'Young\'s modulus Ex vs ply angle θ — angle sweep result' },
-    ],
+    heroImage: { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison — <1% error' },
+    images: [],
     links: {
       github: 'https://github.com/Siddardth7/Virtual-Composite-Design-Optimization',
     },
@@ -323,6 +318,7 @@ const DETAIL_PAGES = {
       {
         title: 'What It Does',
         body: 'A complete engineering toolkit for analyzing, validating, and optimizing composite laminate structures — built from first principles for the SAMPE Fuselage Competition, then extended into a fully validated open-source composites library. Computes full [A],[B],[D] stiffness matrices, recovers ply-level stresses and strains, evaluates failure indices via Tsai-Wu and Hashin criteria, predicts plate deflection via Navier series, and optimizes stacking sequences using Simulated Annealing.',
+        image: { src: 'images/composite/laminate-stack.png', caption: 'ABD matrix stiffness by ply angle — [0/±45/90]s' },
       },
       {
         title: 'Validation Results',
@@ -331,6 +327,10 @@ const DETAIL_PAGES = {
           'CLT vs FEA max principal stress: <3% error at plate center and free edges',
           'Simulated Annealing optimizer finds [0/±45/90]s optimum in <10 min — matches analytical result',
           'Angle sweep Ex vs θ: curves match CFRP handbook published data for all standard material systems',
+        ],
+        gallery: [
+          { src: 'images/composite/failure-indices.png', caption: 'Tsai-Wu & Hashin failure index map' },
+          { src: 'images/composite/angle-sweep.png', caption: "Young's modulus Ex vs ply angle θ" },
         ],
       },
       {
@@ -350,46 +350,43 @@ const DETAIL_PAGES = {
   'exp-tata': {
     type: 'experience',
     tag: 'Industry',
-    title: 'Quality and MRB Intern',
-    meta: 'Tata Boeing Aerospace · AH-64 Apache Fuselage Line · Oct 2022–Mar 2023 · Nagpur, India',
-    highlight: '22% NCR cycle time reduction · defect rate 15% → under 3% · ~$3,000 scrap recovered',
+    title: 'Quality Assurance & MRB Coordinator',
+    meta: 'Tata Advanced Systems Ltd · QC Inspector → MRB Coordinator · Oct 2022–Mar 2023 · Nagpur, India',
+    highlight: '450+ aerospace components inspected for GE Aerospace & Boeing programs',
     accent: 'blue',
     metrics: [
-      { val: '-22%', lbl: 'NCR Cycle Time' },
+      { val: '450+', lbl: 'Parts Inspected' },
+      { val: '22%', lbl: 'Cycle Time ↓' },
       { val: '15→3%', lbl: 'Defect Rate' },
-      { val: '~$3k', lbl: 'Scrap Recovered' },
-      { val: '8D', lbl: 'RCCA Methodology' },
+      { val: '₹2.5L', lbl: 'Scrap Recovered' },
     ],
     images: [],
     sections: [
       {
-        title: 'The Role',
-        body: 'Embedded with the AH-64 Apache attack helicopter fuselage production line at Tata Boeing Aerospace — a joint venture manufacturing composite fuselage sections for Boeing\'s AH-64 program. Introduced 8D problem-solving to MRB disposition, drove Pareto-led RCCA on the top three recurring failure modes, and rebuilt the First Article Inspection process for nonconforming composites.',
-      },
-      {
         title: 'Role Progression',
         steps: [
-          'Months 1–3 (QC): Dimensional inspection using CMM (0.02mm accuracy), surface roughness testing, and GD&T interpretation on composite fuselage sections',
-          'Month 3 onwards (MRB): Promoted to lead cross-functional Material Review Board meetings — coordinating disposition decisions between quality, engineering, and production',
-          'WK 04: 8D methodology rolled out for top-3 defect modes from Pareto analysis of the NCR log',
-          'WK 12: CAPA loop closed — autoclave temperature deviation addressed with X̄-R SPC monitoring',
-          'WK 24: Standard work published — 8D template and SPC control plan handed off to full-time staff',
+          'QC Inspector (Months 1–3): Dimensional inspection using CMM (0.02mm accuracy), surface roughness testing, and GD&T interpretation. Achieved 100% report accuracy with zero customer escapes on GE/Boeing programs.',
+          'MRB Coordinator (Months 4–6): Promoted to lead cross-functional Material Review Board meetings — coordinating disposition decisions between quality, engineering, and production for nonconforming parts.',
         ],
       },
       {
-        title: 'Root Cause: CNC Tool Wear',
-        body: 'Identified CNC tool wear as the source of recurring position-tolerance violations affecting 15% of incoming batches. Implemented tool-life tracking using X̄-R control charts on tool offset data — triggering replacement at a statistical process signal rather than a calendar schedule. Defect rate on the monitored feature dropped from 15% to under 3% within three months.',
+        title: 'Root Cause Analysis',
+        body: 'Identified CNC tool wear as the source of recurring position-tolerance violations affecting 15% of batches. Implemented tool-life tracking using SPC — triggering replacement at a statistical signal rather than a calendar schedule. Defect rate on the monitored feature dropped from 15% to under 3% within three months.',
       },
       {
         title: 'Supplier FMEA & Scrap Recovery',
-        body: 'Led FMEA investigation when a supplier delivered aluminum alloy below specification — affecting 200+ parts. Coordinated use-as-is MRB disposition with engineering, backed by stress analysis confirming adequate margin for the non-critical bracket application. Recovered approximately $3,000 in scrap value and maintained production schedule without a single day of delay.',
+        body: 'Led FMEA investigation when a supplier delivered aluminum alloy below specification — affecting 200+ parts. Negotiated use-as-is MRB disposition with engineering, backed by stress analysis confirming adequate margin for the non-critical bracket application. Recovered ₹2.5L in scrap value and maintained production schedule without delay.',
       },
       {
-        title: 'Standards Context',
-        body: 'Every part on this line was destined for Boeing AH-64 Apache helicopters — zero margin for quality escapes. Working under AS9100 Rev D, first article inspections, and Boeing-specific supplier quality requirements. The internship grounded the Six Sigma Green Belt methodology in real-world aerospace production constraints.',
+        title: 'Process Optimization',
+        body: 'Streamlined MRB documentation workflow using 8D methodology. Reduced average nonconformance cycle time by 22% through standardized root-cause templates across the quality team.',
+      },
+      {
+        title: 'Working with Aerospace Standards',
+        body: 'Every part inspected was destined for GE Aerospace jet engines or Boeing aircraft — zero margin for quality escapes. Working under AS9100 and Boeing supplier quality requirements grounded Six Sigma methodology in real-world aerospace production constraints.',
       },
     ],
-    skills: ['8D Problem Solving', 'pFMEA (AIAG FMEA-4)', 'SPC / X̄-R Charts', 'CMM Inspection', 'GD&T (ASME Y14.5)', 'MRB Disposition', 'RCCA / CAPA', 'AS9100 Rev D', 'First Article Inspection'],
+    skills: ['CMM Operation', 'GD&T (ASME Y14.5)', '8D Problem Solving', 'pFMEA', 'Statistical Process Control', 'Root Cause Analysis', 'AS9100 / ISO 9001', 'MRB Coordination'],
   },
 
   'exp-beckman': {
@@ -486,7 +483,6 @@ const DETAIL_PAGES = {
 // ─── Full-Page Detail Component ────────────────────────────
 function DetailModal({ id, onClose }) {
   const page = DETAIL_PAGES[id];
-  const [imgIdx, setImgIdx] = React.useState(0);
 
   React.useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -499,8 +495,6 @@ function DetailModal({ id, onClose }) {
   }, [onClose]);
 
   if (!page) return null;
-
-  const hasImages = page.images && page.images.length > 0;
 
   return (
     <div className="dp-page" role="dialog" aria-modal="true" aria-label={page.title}>
@@ -562,47 +556,68 @@ function DetailModal({ id, onClose }) {
             ))}
           </div>
 
-          {/* Hero image + gallery */}
-          {hasImages && (
+          {/* Hero image — full width, no thumbnails */}
+          {page.heroImage && (
             <div className="dp-gallery">
               <div className="dp-gallery__hero">
                 <img
-                  src={page.images[imgIdx].src}
-                  alt={page.images[imgIdx].caption}
+                  src={page.heroImage.src}
+                  alt={page.heroImage.caption}
                   className="dp-gallery__hero-img"
                   onError={(e) => { e.target.style.display='none'; }}
                 />
-                <p className="mono dp-gallery__caption">{page.images[imgIdx].caption}</p>
               </div>
-              {page.images.length > 1 && (
-                <div className="dp-gallery__strip">
-                  {page.images.map((img, i) => (
-                    <button
-                      key={i}
-                      className={`dp-gallery__thumb ${imgIdx === i ? 'is-active' : ''}`}
-                      onClick={() => setImgIdx(i)}
-                      aria-label={img.caption}
-                    >
-                      <img src={img.src} alt={img.caption} onError={(e) => { e.target.parentElement.style.display='none'; }} />
-                    </button>
-                  ))}
-                </div>
-              )}
+              <p className="mono dp-gallery__caption">{page.heroImage.caption}</p>
             </div>
           )}
 
-          {/* Content sections */}
+          {/* Content sections — images placed contextually within each section */}
           <div className="dp-sections">
             {page.sections.map((s, i) => (
               <div key={i} className="dp-section">
                 <h3 className={`dp-section__title dp-section__title--${page.accent}`}>{s.title}</h3>
-                {s.body && <p className="dp-section__body">{s.body}</p>}
-                {s.steps && (
-                  <ul className="dp-steps">
-                    {s.steps.map((step, j) => (
-                      <li key={j} className={`dp-step dp-step--${page.accent}`}>{step}</li>
+
+                {/* If section has an inline image: text left, image right */}
+                {s.image ? (
+                  <div className="dp-section__with-img">
+                    <div className="dp-section__with-img-text">
+                      {s.body && <p className="dp-section__body">{s.body}</p>}
+                      {s.steps && (
+                        <ul className="dp-steps">
+                          {s.steps.map((step, j) => (
+                            <li key={j} className={`dp-step dp-step--${page.accent}`}>{step}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                    <figure className="dp-section__inline-img">
+                      <img src={s.image.src} alt={s.image.caption} onError={(e) => { e.target.parentElement.style.display='none'; }} />
+                      <figcaption className="mono">{s.image.caption}</figcaption>
+                    </figure>
+                  </div>
+                ) : (
+                  <>
+                    {s.body && <p className="dp-section__body">{s.body}</p>}
+                    {s.steps && (
+                      <ul className="dp-steps">
+                        {s.steps.map((step, j) => (
+                          <li key={j} className={`dp-step dp-step--${page.accent}`}>{step}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                )}
+
+                {/* Section gallery — row of images below section content */}
+                {s.gallery && s.gallery.length > 0 && (
+                  <div className="dp-section__gallery">
+                    {s.gallery.map((img, j) => (
+                      <figure key={j} className="dp-section__gallery-item">
+                        <img src={img.src} alt={img.caption} onError={(e) => { e.target.parentElement.style.display='none'; }} />
+                        <figcaption className="mono">{img.caption}</figcaption>
+                      </figure>
                     ))}
-                  </ul>
+                  </div>
                 )}
               </div>
             ))}

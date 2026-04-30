@@ -229,11 +229,20 @@ function Hero() {
               engineers do in spreadsheets.
             </p>
 
-            <div className="cs__badges">
-              <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace Engineering · 2024–2026</span>
-              <span className="cs__badge mono">🎓 VNR VJIET · B.Tech Mechanical Engineering · 2019–2023</span>
-              <span className="cs__badge cs__badge--green mono">★ Six Sigma Green Belt · CSSC</span>
-              <span className="cs__badge cs__badge--orange mono">★ Inspection &amp; Quality Control · NPTEL · IIT Roorkee</span>
+            <div className="cs__section">
+              <p className="cs__section-title mono">EDUCATION</p>
+              <div className="cs__badges">
+                <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace Engineering · 2024–2026</span>
+                <span className="cs__badge mono">🎓 VNR VJIET · B.Tech Mechanical Engineering · 2019–2023</span>
+              </div>
+            </div>
+
+            <div className="cs__section">
+              <p className="cs__section-title mono">CERTIFICATIONS</p>
+              <div className="cs__badges">
+                <span className="cs__badge cs__badge--green mono">★ Six Sigma Green Belt · CSSC</span>
+                <span className="cs__badge cs__badge--orange mono">★ Inspection &amp; Quality Control · NPTEL · IIT Roorkee</span>
+              </div>
             </div>
 
             <div className="cs__section">
