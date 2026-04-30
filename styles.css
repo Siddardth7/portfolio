@@ -274,7 +274,7 @@ body::before {
 /* ───────── HERO ───────── */
 .hero {
   position: relative;
-  padding: calc(var(--nav-h) + var(--space-6)) 0 var(--space-6);
+  padding: calc(var(--nav-h) + var(--space-3)) 0 var(--space-3);
   overflow: hidden;
   z-index: 1;
 }
@@ -1458,7 +1458,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 .cs__kicker {
   font-size: 11px;
@@ -1470,11 +1470,11 @@ body::before {
 .cs__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(44px, 5.5vw, 80px);
+  font-size: clamp(34px, 4vw, 56px);
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--text-0);
-  margin: 0 0 var(--space-6);
+  margin: 0 0 var(--space-3);
 }
 .cs__card {
   display: grid;
@@ -1496,7 +1496,7 @@ body::before {
 /* ── Photo column ── */
 .cs__photo-col {
   position: relative;
-  min-height: 500px;
+  min-height: 420px;
   border-right: 1px solid var(--line);
   overflow: hidden;
 }
@@ -1543,14 +1543,14 @@ body::before {
 
 /* ── Info column ── */
 .cs__info-col {
-  padding: var(--space-6) var(--space-7);
+  padding: var(--space-4) var(--space-6);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-3);
 }
 .cs__bio {
-  font-size: 15px;
-  line-height: 1.78;
+  font-size: 14px;
+  line-height: 1.65;
   color: var(--text-1);
   margin: 0;
 }
