@@ -199,7 +199,7 @@ function Hero() {
           <p className="cs__kicker mono">ABOUT</p>
         </div>
 
-        <h1 className="cs__title">Character Sheet</h1>
+        <h1 className="cs__title">About Me</h1>
 
         <div className={`cs__card ${seen ? 'is-seen' : ''}`}>
 
@@ -230,8 +230,10 @@ function Hero() {
             </p>
 
             <div className="cs__badges">
-              <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace · 2024–2026</span>
+              <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace Engineering · 2024–2026</span>
+              <span className="cs__badge mono">🎓 VNR VJIET · B.Tech Mechanical Engineering · 2019–2023</span>
               <span className="cs__badge cs__badge--green mono">★ Six Sigma Green Belt · CSSC</span>
+              <span className="cs__badge cs__badge--orange mono">★ Inspection &amp; Quality Control · NPTEL · IIT Roorkee</span>
             </div>
 
             <div className="cs__section">
@@ -251,7 +253,7 @@ function Hero() {
                     <circle cx="4" cy="4" r="2"/>
                   </svg>
                 </a>
-                <a href="mailto:siddardth1524@gmail.com" className="cs__icon-btn" aria-label="Email">
+                <a href="mailto:siddardth1524@gmail.com" className="cs__icon-btn" aria-label="Email" rel="noreferrer">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <rect x="2" y="4" width="20" height="16" rx="2"/>
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -1062,7 +1064,7 @@ const ROLES = [
     company: 'Tata Boeing Aerospace', dates: 'Oct 2022–Mar 2023',
     location: 'Nagpur, India',
     summary: 'Embedded with the AH-64 Apache fuselage line. Introduced 8D problem-solving to MRB disposition, drove Pareto-led RCCA on top failure modes, and rebuilt the FAI process for nonconforming composites.',
-    metricBits: [['-22%', 'NCR cycle time'], ['15→3%', 'defect rate'], ['8D', 'methodology'], ['5', 'lines audited']],
+    metricBits: [['-22%', 'NCR cycle time'], ['15→3%', 'defect rate'], ['~$3k', 'scrap recovered'], ['AS9100', 'standard']],
     timeline: [
       { t: 'WK 01', label: 'Onboarded · MRB shadow' },
       { t: 'WK 04', label: '8D rolled out · top-3 modes' },
