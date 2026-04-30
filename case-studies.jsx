@@ -27,13 +27,13 @@ const DETAIL_PAGES = {
       { val: '20 psi', lbl: 'Pressure Hold Test' },
       { val: '0', lbl: 'Failures' },
     ],
-    heroImage: { src: 'images/sampe/testing.jpg', caption: 'Team with finished fuselage at MTS testing machine' },
+    heroImage: { src: 'images/sampe/testing-mts.jpg', caption: 'Team with the finished fuselage at the MTS testing machine' },
     images: [],
     sections: [
       {
         title: 'What Was Built',
         body: 'Manufactured a composite fuselage cylinder (24"×6" OD) capable of withstanding 2,700 lbf in three-point bending using vacuum bagging and autoclave cure. Stacking sequence was optimized via Python simulated annealing and validated in ABAQUS FEA — achieving 38% deflection reduction versus the baseline [0/90]s schedule. Final build achieved first-article structural acceptance on the first attempt.',
-        image: { src: 'images/sampe/cad-model.png', caption: 'CAD model — SolidWorks' },
+        image: { src: 'images/sampe/cad-model-old.png', caption: 'CAD model — SolidWorks' },
       },
       {
         title: 'The Challenge',
@@ -51,9 +51,9 @@ const DETAIL_PAGES = {
           '07 — MTS three-point bending test — 2,700 lbf sustained with <1" deflection',
         ],
         gallery: [
-          { src: 'images/sampe/fabrication-1.jpg', caption: 'Nomex honeycomb core on aluminum mandrel' },
-          { src: 'images/sampe/fabrication-2.jpg', caption: 'Continuous prepreg blanket layup' },
-          { src: 'images/sampe/fabrication-3.jpg', caption: 'Vacuum-bagged part before autoclave cure' },
+          { src: 'images/sampe/nomex-core.jpg', caption: 'Nomex honeycomb core wrapped on aluminum mandrel' },
+          { src: 'images/sampe/prepreg-layup.jpg', caption: 'Continuous prepreg blanket layup — the innovative solution' },
+          { src: 'images/sampe/autoclave.jpg', caption: 'Vacuum-bagged part loaded into autoclave for cure' },
         ],
       },
       {
@@ -64,8 +64,8 @@ const DETAIL_PAGES = {
         title: 'Testing & Results',
         body: 'First-article structural acceptance on the first attempt. 2,700 lbf peak load with zero failures. 38% deflection reduction over the baseline schedule confirmed by ABAQUS FEA cross-validation.',
         gallery: [
-          { src: 'images/sampe/process-1.jpg', caption: 'Finished composite cylinder — post-cure inspection' },
-          { src: 'images/sampe/process-2.jpg', caption: 'MTS three-point bending test — 2,700 lbf' },
+          { src: 'images/sampe/finished-cylinder.jpg', caption: 'Finished composite cylinder — post-cure' },
+          { src: 'images/sampe/utm-test.png', caption: 'MTS machine readout during structural testing' },
         ],
       },
     ],
@@ -85,6 +85,7 @@ const DETAIL_PAGES = {
       { val: '0', lbl: 'Mechanical Failures' },
       { val: '30', lbl: 'Team Members Led' },
     ],
+    heroImage: { src: 'images/esvc/vehicle-competition.jpg', caption: "Team Solarians' solar-electric vehicle competing at ESVC 2023 National Championship" },
     images: [],
     sections: [
       {
@@ -108,6 +109,7 @@ const DETAIL_PAGES = {
           '04 — Pre-competition systems check: wheel bearing, brake bleed, wiring chafe — all caught before race day',
           '05 — Chassis welding (TIG/MIG), solar panel integration, and final assembly coordination',
         ],
+        image: { src: 'images/esvc/pvc-prototype.jpg', caption: 'PVC pipe mockup for driver ergonomics validation' },
       },
       {
         title: 'Key Lesson',
@@ -130,6 +132,7 @@ const DETAIL_PAGES = {
       { val: '24', lbl: 'Formulations Tested' },
       { val: '850°C', lbl: 'Sintering Temperature' },
     ],
+    heroImage: { src: 'images/borosilicate/poster-presentation.jpg', caption: 'Team presenting research findings at the departmental "Show and Tell" symposium' },
     images: [],
     sections: [
       {
@@ -147,14 +150,19 @@ const DETAIL_PAGES = {
           '06 — XRD analysis to confirm amorphous structure preservation (no cristobalite formation)',
           '07 — SEM/EDS characterization of phase distribution and bonding quality',
         ],
+        image: { src: 'images/borosilicate/pellet-samples.png', caption: 'Sintered pellets: (a) Pure BS, (b) BS+Al₂O₃, (c) BS+n-Cu₂O, (d) BS+Al₂O₃+n-Cu₂O' },
       },
       {
         title: 'Critical Challenge — Cristobalite Suppression',
         body: 'The primary risk in borosilicate sintering is cristobalite phase formation — a crystalline transformation that causes catastrophic volume changes and cracking on thermal cycling. Introduced alumina as a network modifier: Al³⁺ ions diffuse into the glass matrix, increasing viscosity and suppressing nucleation sites. XRD analysis across all 24 formulations confirmed amorphous structure preservation in alumina-containing compositions.',
       },
       {
-        title: 'Optimal Composition & Results',
-        body: 'Best-performing formulation: 90% borosilicate glass + 10% Al₂O₃ at 850°C — achieving 698.66 HV versus the 548 HV baseline. Copper oxide additions improved density but introduced crystallinity risk at higher concentrations; the alumina-only route produced more consistent results across the 24-sample matrix. Results presented at the departmental "Show and Tell" research symposium.',
+        title: 'Characterization Results',
+        body: 'Best-performing formulation: 90% borosilicate glass + 10% Al₂O₃ at 850°C — achieving 698.66 HV versus the 548 HV baseline. Copper oxide additions improved density but introduced crystallinity risk at higher concentrations; the alumina-only route produced more consistent results across the 24-sample matrix.',
+        gallery: [
+          { src: 'images/borosilicate/hardness-chart.png', caption: 'Micro Vickers Hardness: (a) BS/Al₂O₃ composites (b) BS/n-Cu₂O composites' },
+          { src: 'images/borosilicate/xrd-analysis.png', caption: 'XRD patterns confirming amorphous structure across compositions' },
+        ],
       },
     ],
     skills: ['Powder Metallurgy', 'Sintering Optimization', 'Micro Vickers Hardness (ASTM E384)', 'XRD Analysis', 'SEM/EDS Characterization', 'Design of Experiments', 'Technical Writing', 'Research Presentation'],
@@ -173,6 +181,7 @@ const DETAIL_PAGES = {
       { val: '2.3', lbl: 'CL Max (SELIG 1223)' },
       { val: '385k', lbl: 'Reynolds Number' },
     ],
+    heroImage: { src: 'images/aero/rc-aircraft.png', caption: 'Radio-controlled cargo aircraft designed for SAE Aero Design Challenge' },
     images: [],
     sections: [
       {
