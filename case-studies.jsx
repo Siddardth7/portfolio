@@ -1,4 +1,4 @@
-// case-studies.jsx — full-page detail view for Lab projects, Code tools, and Experience
+// case-studies.jsx - full-page detail view for Lab projects, Code tools, and Experience
 // Triggered via window.openDetail(id); renders as a full-screen page overlay with scroll
 
 const useState = React.useState;
@@ -32,39 +32,39 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'What Was Built',
-        body: 'Manufactured a composite fuselage cylinder (24"×6" OD) capable of withstanding 2,700 lbf in three-point bending using vacuum bagging and autoclave cure. Stacking sequence was optimized via Python simulated annealing and validated in ABAQUS FEA — achieving 38% deflection reduction versus the baseline [0/90]s schedule. Final build achieved first-article structural acceptance on the first attempt.',
-        image: { src: 'images/sampe/cad-model-old.png', caption: 'CAD model — SolidWorks' },
+        body: 'Manufactured a composite fuselage cylinder (24"×6" OD) capable of withstanding 2,700 lbf in three-point bending using vacuum bagging and autoclave cure. Stacking sequence was optimized via Python simulated annealing and validated in ABAQUS FEA - achieving 38% deflection reduction versus the baseline [0/90]s schedule. Final build achieved first-article structural acceptance on the first attempt.',
+        image: { src: 'images/sampe/cad-model-old.png', caption: 'CAD model - SolidWorks' },
       },
       {
         title: 'The Challenge',
-        body: 'Meet aerospace-grade quality with university lab constraints, prepreg-only materials, four structural cutouts, and no room for iteration — all in one semester. The 8D risk register identified vacuum bag leak (RPN 60) as the highest-priority failure mode. The pressurized hold test at 20 psi (24-hour hold) was the structural acceptance gate before cure.',
+        body: 'Meet aerospace-grade quality with university lab constraints, prepreg-only materials, four structural cutouts, and no room for iteration - all in one semester. The 8D risk register identified vacuum bag leak (RPN 60) as the highest-priority failure mode. The pressurized hold test at 20 psi (24-hour hold) was the structural acceptance gate before cure.',
       },
       {
         title: 'How It Was Built',
         steps: [
-          '01 — Stacking sequence optimized: Python simulated annealing over 12-ply symmetric layup, validated in ABAQUS FEA',
-          '02 — Prepreg layup on aluminum mandrel with debulking every 4–6 plies',
-          '03 — Dual-blanket redesign: 7 inner + 7 outer continuous prepreg wraps (solving the circumference gap problem)',
-          '04 — Two-stage autoclave cure: 275°F, 40 psi, 90 min dwell',
-          '05 — Pressurized hold test at 20 psi — 24-hour leak check acceptance gate',
-          '06 — Waterjet cutouts (4 structural cutouts) and surface finishing',
-          '07 — MTS three-point bending test — 2,700 lbf sustained with <1" deflection',
+          '01 - Stacking sequence optimized: Python simulated annealing over 12-ply symmetric layup, validated in ABAQUS FEA',
+          '02 - Prepreg layup on aluminum mandrel with debulking every 4–6 plies',
+          '03 - Dual-blanket redesign: 7 inner + 7 outer continuous prepreg wraps (solving the circumference gap problem)',
+          '04 - Two-stage autoclave cure: 275°F, 40 psi, 90 min dwell',
+          '05 - Pressurized hold test at 20 psi - 24-hour leak check acceptance gate',
+          '06 - Waterjet cutouts (4 structural cutouts) and surface finishing',
+          '07 - MTS three-point bending test - 2,700 lbf sustained with <1" deflection',
         ],
         gallery: [
           { src: 'images/sampe/nomex-core.jpg', caption: 'Nomex honeycomb core wrapped on aluminum mandrel' },
-          { src: 'images/sampe/prepreg-layup.jpg', caption: 'Continuous prepreg blanket layup — the innovative solution' },
+          { src: 'images/sampe/prepreg-layup.jpg', caption: 'Continuous prepreg blanket layup - the innovative solution' },
           { src: 'images/sampe/autoclave.jpg', caption: 'Vacuum-bagged part loaded into autoclave for cure' },
         ],
       },
       {
         title: 'The Crisis & Solution',
-        body: 'At ply 10 of 14, a 3-inch circumferential gap appeared — the prepreg wouldn\'t close around the mandrel. Root cause: all plies had been cut to identical length, but increasing wall thickness meant each successive ply needed a longer circumference. The all-nighter redesign abandoned 14 individual wraps and created one continuous prepreg blanket with progressive ply lengths applied in a single roll. This eliminated delamination risk, maintained fiber continuity, and achieved perfect fit on the first re-attempt.',
+        body: 'At ply 10 of 14, a 3-inch circumferential gap appeared - the prepreg wouldn\'t close around the mandrel. Root cause: all plies had been cut to identical length, but increasing wall thickness meant each successive ply needed a longer circumference. The all-nighter redesign abandoned 14 individual wraps and created one continuous prepreg blanket with progressive ply lengths applied in a single roll. This eliminated delamination risk, maintained fiber continuity, and achieved perfect fit on the first re-attempt.',
       },
       {
         title: 'Testing & Results',
         body: 'First-article structural acceptance on the first attempt. 2,700 lbf peak load with zero failures. 38% deflection reduction over the baseline schedule confirmed by ABAQUS FEA cross-validation.',
         gallery: [
-          { src: 'images/sampe/finished-cylinder.jpg', caption: 'Finished composite cylinder — post-cure' },
+          { src: 'images/sampe/finished-cylinder.jpg', caption: 'Finished composite cylinder - post-cure' },
           { src: 'images/sampe/utm-test.png', caption: 'MTS machine readout during structural testing' },
         ],
       },
@@ -90,7 +90,7 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'What Was Built',
-        body: 'Led manufacturing and brake/suspension systems for a 30-member team building a solar-electric three-wheeler for the national Electric Solar Vehicle Championship. Over four years, progressed from junior team member to Manufacturing Lead — coordinating chassis welding, hydraulic brake integration, suspension mounting, and final vehicle assembly for four consecutive competition seasons.',
+        body: 'Led manufacturing and brake/suspension systems for a 30-member team building a solar-electric three-wheeler for the national Electric Solar Vehicle Championship. Over four years, progressed from junior team member to Manufacturing Lead - coordinating chassis welding, hydraulic brake integration, suspension mounting, and final vehicle assembly for four consecutive competition seasons.',
       },
       {
         title: 'Brake System',
@@ -98,22 +98,22 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Suspension Engineering',
-        body: '2023 rulebook changes required a complete redesign of suspension mounting brackets mid-season. Preserved 100mm wheel travel while meeting new compliance requirements — delivered revised brackets within one week to avoid competition eligibility risk. The fix required rethinking the pickup point geometry without touching the chassis.',
+        body: '2023 rulebook changes required a complete redesign of suspension mounting brackets mid-season. Preserved 100mm wheel travel while meeting new compliance requirements - delivered revised brackets within one week to avoid competition eligibility risk. The fix required rethinking the pickup point geometry without touching the chassis.',
       },
       {
         title: 'Prototype & Validation Method',
         steps: [
-          '01 — Built full-scale PVC pipe mockup to validate driver ergonomics before metal fabrication',
-          '02 — Adjusted seating position, pedal reach, steering wheel placement, and sightlines with competition driver',
-          '03 — Three-stage inspection protocol implemented across all 30 team members\' workstations',
-          '04 — Pre-competition systems check: wheel bearing, brake bleed, wiring chafe — all caught before race day',
-          '05 — Chassis welding (TIG/MIG), solar panel integration, and final assembly coordination',
+          '01 - Built full-scale PVC pipe mockup to validate driver ergonomics before metal fabrication',
+          '02 - Adjusted seating position, pedal reach, steering wheel placement, and sightlines with competition driver',
+          '03 - Three-stage inspection protocol implemented across all 30 team members\' workstations',
+          '04 - Pre-competition systems check: wheel bearing, brake bleed, wiring chafe - all caught before race day',
+          '05 - Chassis welding (TIG/MIG), solar panel integration, and final assembly coordination',
         ],
         image: { src: 'images/esvc/pvc-prototype.jpg', caption: 'PVC pipe mockup for driver ergonomics validation' },
       },
       {
         title: 'Key Lesson',
-        body: 'Zero mechanical failures was not luck. It was the direct result of a three-stage inspection protocol I implemented — catching three pre-competition issues (loose wheel bearing, brake bleed air pocket, wiring chafe) before they could become race-day failures. Quality control on a student team is harder than on a factory floor because the consequences of a missed inspection are felt in front of a crowd.',
+        body: 'Zero mechanical failures was not luck. It was the direct result of a three-stage inspection protocol I implemented - catching three pre-competition issues (loose wheel bearing, brake bleed air pocket, wiring chafe) before they could become race-day failures. Quality control on a student team is harder than on a factory floor because the consequences of a missed inspection are felt in front of a crowd.',
       },
     ],
     skills: ['Chassis Welding (TIG/MIG)', 'Hydraulic Brake Systems', 'Suspension Design', 'Team Leadership (30 members)', 'Quality Control Protocol', 'Prototype Testing', 'Vehicle Dynamics', 'Manufacturing Coordination'],
@@ -137,28 +137,28 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'What Was Built',
-        body: 'Developed borosilicate-alumina-copper oxide glass-ceramic composites to address vial breakage in pharmaceutical packaging. As Project Lead, designed, fabricated, and characterized 24 composite formulations using powder metallurgy techniques — achieving up to 27% hardness improvement (548 → 699 HV) while maintaining commercial viability. The work resulted in a 52-page technical thesis and a departmental research symposium presentation.',
+        body: 'Developed borosilicate-alumina-copper oxide glass-ceramic composites to address vial breakage in pharmaceutical packaging. As Project Lead, designed, fabricated, and characterized 24 composite formulations using powder metallurgy techniques - achieving up to 27% hardness improvement (548 → 699 HV) while maintaining commercial viability. The work resulted in a 52-page technical thesis and a departmental research symposium presentation.',
       },
       {
         title: 'How It Was Built',
         steps: [
-          '01 — Precision weighing (±0.01g) of borosilicate glass, Al₂O₃, and n-Cu₂O powders',
-          '02 — Wet grinding with 2% PVA binder in ball mill to achieve homogeneous powder mix',
-          '03 — Hydraulic compaction at 50 kgf to form green pellets',
-          '04 — Multi-stage sintering: 300°C (20 min binder burnout) → 5°C/min ramp → 850°C (30 min isothermal)',
-          '05 — Micro Vickers Hardness testing (ASTM E384) across all 24 formulations',
-          '06 — XRD analysis to confirm amorphous structure preservation (no cristobalite formation)',
-          '07 — SEM/EDS characterization of phase distribution and bonding quality',
+          '01 - Precision weighing (±0.01g) of borosilicate glass, Al₂O₃, and n-Cu₂O powders',
+          '02 - Wet grinding with 2% PVA binder in ball mill to achieve homogeneous powder mix',
+          '03 - Hydraulic compaction at 50 kgf to form green pellets',
+          '04 - Multi-stage sintering: 300°C (20 min binder burnout) → 5°C/min ramp → 850°C (30 min isothermal)',
+          '05 - Micro Vickers Hardness testing (ASTM E384) across all 24 formulations',
+          '06 - XRD analysis to confirm amorphous structure preservation (no cristobalite formation)',
+          '07 - SEM/EDS characterization of phase distribution and bonding quality',
         ],
         image: { src: 'images/borosilicate/pellet-samples.png', caption: 'Sintered pellets: (a) Pure BS, (b) BS+Al₂O₃, (c) BS+n-Cu₂O, (d) BS+Al₂O₃+n-Cu₂O' },
       },
       {
-        title: 'Critical Challenge — Cristobalite Suppression',
-        body: 'The primary risk in borosilicate sintering is cristobalite phase formation — a crystalline transformation that causes catastrophic volume changes and cracking on thermal cycling. Introduced alumina as a network modifier: Al³⁺ ions diffuse into the glass matrix, increasing viscosity and suppressing nucleation sites. XRD analysis across all 24 formulations confirmed amorphous structure preservation in alumina-containing compositions.',
+        title: 'Critical Challenge - Cristobalite Suppression',
+        body: 'The primary risk in borosilicate sintering is cristobalite phase formation - a crystalline transformation that causes catastrophic volume changes and cracking on thermal cycling. Introduced alumina as a network modifier: Al³⁺ ions diffuse into the glass matrix, increasing viscosity and suppressing nucleation sites. XRD analysis across all 24 formulations confirmed amorphous structure preservation in alumina-containing compositions.',
       },
       {
         title: 'Characterization Results',
-        body: 'Best-performing formulation: 90% borosilicate glass + 10% Al₂O₃ at 850°C — achieving 698.66 HV versus the 548 HV baseline. Copper oxide additions improved density but introduced crystallinity risk at higher concentrations; the alumina-only route produced more consistent results across the 24-sample matrix.',
+        body: 'Best-performing formulation: 90% borosilicate glass + 10% Al₂O₃ at 850°C - achieving 698.66 HV versus the 548 HV baseline. Copper oxide additions improved density but introduced crystallinity risk at higher concentrations; the alumina-only route produced more consistent results across the 24-sample matrix.',
         gallery: [
           { src: 'images/borosilicate/hardness-chart.png', caption: 'Micro Vickers Hardness: (a) BS/Al₂O₃ composites (b) BS/n-Cu₂O composites' },
           { src: 'images/borosilicate/xrd-analysis.png', caption: 'XRD patterns confirming amorphous structure across compositions' },
@@ -190,16 +190,16 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Airfoil Selection',
-        body: 'Compared five high-lift airfoils (SELIG 1223, E423, RG-15, CH10, FX74) using XFLR5 at Re = 385,000 — matching the expected flight speed and wing chord. Evaluated CL, CD, and L/D across the full angle-of-attack range. Selected SELIG 1223 for its superior CL max (~2.3) and favorable stall behavior: a gradual, benign stall onset that protects against pilot-induced tip stall at low-speed landing approaches.',
+        body: 'Compared five high-lift airfoils (SELIG 1223, E423, RG-15, CH10, FX74) using XFLR5 at Re = 385,000 - matching the expected flight speed and wing chord. Evaluated CL, CD, and L/D across the full angle-of-attack range. Selected SELIG 1223 for its superior CL max (~2.3) and favorable stall behavior: a gradual, benign stall onset that protects against pilot-induced tip stall at low-speed landing approaches.',
       },
       {
         title: 'CFD Validation',
         steps: [
-          '01 — ANSYS Fluent model: tetrahedral mesh with 2mm elements near airfoil surface',
-          '02 — k-epsilon turbulence model, 250 SIMPLE iterations to convergence',
-          '03 — Cruise results: Lift = 66.7 N, Drag = 5.4 N; CL = 1.4, CD = 0.1004',
-          '04 — Maximum Lift = 168.56 N at stall angle',
-          '05 — 85% correlation with Prandtl lifting-line theory predictions across the AoA sweep',
+          '01 - ANSYS Fluent model: tetrahedral mesh with 2mm elements near airfoil surface',
+          '02 - k-epsilon turbulence model, 250 SIMPLE iterations to convergence',
+          '03 - Cruise results: Lift = 66.7 N, Drag = 5.4 N; CL = 1.4, CD = 0.1004',
+          '04 - Maximum Lift = 168.56 N at stall angle',
+          '05 - 85% correlation with Prandtl lifting-line theory predictions across the AoA sweep',
         ],
       },
       {
@@ -237,17 +237,17 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'The Problem It Solves',
-        body: 'Process FMEA risk analysis is mandatory in aerospace (AS9100) and automotive (IATF 16949) manufacturing. In practice, engineers manage pFMEA tables in sprawling Excel spreadsheets — RPN scores calculated manually, Pareto ranking done by hand, and AIAG criticality flags routinely missed. This tool replaces that entire workflow with a live, interactive Streamlit application.',
+        body: 'Process FMEA risk analysis is mandatory in aerospace (AS9100) and automotive (IATF 16949) manufacturing. In practice, engineers manage pFMEA tables in sprawling Excel spreadsheets - RPN scores calculated manually, Pareto ranking done by hand, and AIAG criticality flags routinely missed. This tool replaces that entire workflow with a live, interactive Streamlit application.',
       },
       {
         title: 'How It Works',
         steps: [
-          '01 — Upload pFMEA data as CSV/Excel, or click "Use Demo Dataset" (30-row composite panel FMEA)',
-          '02 — Engine computes RPN = Severity × Occurrence × Detection for all failure modes',
-          '03 — AIAG FMEA-4 criticality flags applied: Severity ≥ 9 auto-flagged regardless of total RPN',
-          '04 — Interactive Pareto chart identifies the 20% of failure modes driving 80% of total risk',
-          '05 — Heatmap visualization maps Severity vs Detection across the full risk matrix',
-          '06 — Export publication-ready PDF report or ranked Excel file with one click',
+          '01 - Upload pFMEA data as CSV/Excel, or click "Use Demo Dataset" (30-row composite panel FMEA)',
+          '02 - Engine computes RPN = Severity × Occurrence × Detection for all failure modes',
+          '03 - AIAG FMEA-4 criticality flags applied: Severity ≥ 9 auto-flagged regardless of total RPN',
+          '04 - Interactive Pareto chart identifies the 20% of failure modes driving 80% of total risk',
+          '05 - Heatmap visualization maps Severity vs Detection across the full risk matrix',
+          '06 - Export publication-ready PDF report or ranked Excel file with one click',
         ],
       },
       {
@@ -256,7 +256,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Demo Dataset',
-        body: 'The 30-row demo dataset is a realistic composite panel pFMEA with autoclave cure temperature deviation, vacuum bag leak, ply misalignment, and 27 other failure modes. The top 6 modes (of 30) account for approximately 29% of total RPN — the Pareto chart makes this immediately visible, showing exactly where corrective action spending should be concentrated.',
+        body: 'The 30-row demo dataset is a realistic composite panel pFMEA with autoclave cure temperature deviation, vacuum bag leak, ply misalignment, and 27 other failure modes. The top 6 modes (of 30) account for approximately 29% of total RPN - the Pareto chart makes this immediately visible, showing exactly where corrective action spending should be concentrated.',
       },
     ],
     skills: ['Python', 'Streamlit', 'Plotly', 'Pandas', 'pFMEA', 'AIAG FMEA-4', 'RPN Calculation', 'Pareto Analysis', 'ReportLab PDF', 'GitHub Actions CI'],
@@ -283,14 +283,14 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'The Problem It Solves',
-        body: 'SPC charts are the industry standard for separating common-cause from special-cause variation. Most production environments either track SPC in Excel (no automated rule detection) or pay for expensive MES software. This dashboard provides full-featured SPC analysis — five chart types, both Western Electric and Nelson rule detection, plus Cp/Cpk/Pp/Ppk — free and open-source.',
+        body: 'SPC charts are the industry standard for separating common-cause from special-cause variation. Most production environments either track SPC in Excel (no automated rule detection) or pay for expensive MES software. This dashboard provides full-featured SPC analysis - five chart types, both Western Electric and Nelson rule detection, plus Cp/Cpk/Pp/Ppk - free and open-source.',
       },
       {
         title: 'Three Application Pages',
         steps: [
-          'Control Charts — X̄-R, X̄-S, I-MR, p-chart, and u-chart for five aerospace process streams with rule violation markers',
-          'Process Capability — Cp, Cpk, Pp, Ppk with distribution histogram and Shapiro-Wilk normality test',
-          'Live Simulation — real-time subgroup generation with injected mean-shift and variance-increase disturbances',
+          'Control Charts - X̄-R, X̄-S, I-MR, p-chart, and u-chart for five aerospace process streams with rule violation markers',
+          'Process Capability - Cp, Cpk, Pp, Ppk with distribution histogram and Shapiro-Wilk normality test',
+          'Live Simulation - real-time subgroup generation with injected mean-shift and variance-increase disturbances',
         ],
       },
       {
@@ -299,7 +299,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Why 83 Tests?',
-        body: 'SPC math has well-defined correct answers. A test suite that covers every control limit formula and every rule detection case guarantees the charts are numerically correct. Western Electric Rule 2 (2 of 3 beyond 2σ) and Nelson Rule 7 (15 in a row within 1σ) are the trickiest to implement correctly — both have explicit test cases. The test suite runs on every GitHub push via Actions CI.',
+        body: 'SPC math has well-defined correct answers. A test suite that covers every control limit formula and every rule detection case guarantees the charts are numerically correct. Western Electric Rule 2 (2 of 3 beyond 2σ) and Nelson Rule 7 (15 in a row within 1σ) are the trickiest to implement correctly - both have explicit test cases. The test suite runs on every GitHub push via Actions CI.',
       },
     ],
     skills: ['Python', 'Streamlit', 'Plotly', 'SPC', 'X̄-R Control Charts', 'Cp/Cpk Capability', 'Western Electric Rules', 'Nelson Rules', 'Pandas', 'NumPy', 'SciPy'],
@@ -318,7 +318,7 @@ const DETAIL_PAGES = {
       { val: 'SA', lbl: 'Stacking Optimizer' },
       { val: 'ABD', lbl: 'Full Matrix Output' },
     ],
-    heroImage: { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison — <1% error' },
+    heroImage: { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison - <1% error' },
     images: [],
     links: {
       github: 'https://github.com/Siddardth7/Virtual-Composite-Design-Optimization',
@@ -326,15 +326,15 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'What It Does',
-        body: 'A complete engineering toolkit for analyzing, validating, and optimizing composite laminate structures — built from first principles for the SAMPE Fuselage Competition, then extended into a fully validated open-source composites library. Computes full [A],[B],[D] stiffness matrices, recovers ply-level stresses and strains, evaluates failure indices via Tsai-Wu and Hashin criteria, predicts plate deflection via Navier series, and optimizes stacking sequences using Simulated Annealing.',
-        image: { src: 'images/composite/laminate-stack.png', caption: 'ABD matrix stiffness by ply angle — [0/±45/90]s' },
+        body: 'A complete engineering toolkit for analyzing, validating, and optimizing composite laminate structures - built from first principles for the SAMPE Fuselage Competition, then extended into a fully validated open-source composites library. Computes full [A],[B],[D] stiffness matrices, recovers ply-level stresses and strains, evaluates failure indices via Tsai-Wu and Hashin criteria, predicts plate deflection via Navier series, and optimizes stacking sequences using Simulated Annealing.',
+        image: { src: 'images/composite/laminate-stack.png', caption: 'ABD matrix stiffness by ply angle - [0/±45/90]s' },
       },
       {
         title: 'Validation Results',
         steps: [
           'CLT vs CalculiX FEA deflection: <1% error on IM7/8552 simply-supported plate (3 configurations verified)',
           'CLT vs FEA max principal stress: <3% error at plate center and free edges',
-          'Simulated Annealing optimizer finds [0/±45/90]s optimum in <10 min — matches analytical result',
+          'Simulated Annealing optimizer finds [0/±45/90]s optimum in <10 min - matches analytical result',
           'Angle sweep Ex vs θ: curves match CFRP handbook published data for all standard material systems',
         ],
         gallery: [
@@ -344,11 +344,11 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Engineering Theory',
-        body: 'Built on Classical Laminate Theory (Kirchhoff-Love plate kinematics: small deflections, perfect bonding, plane stress per ply). The ABD constitutive system relates force/moment resultants to mid-plane strains and curvatures. Failure criteria: Tsai-Wu (quadratic tensor polynomial) and Hashin 1980 (physically-motivated fiber/matrix splitting modes). Simulated Annealing drives the stacking optimizer — accepts worse solutions probabilistically at high temperature to escape local minima.',
+        body: 'Built on Classical Laminate Theory (Kirchhoff-Love plate kinematics: small deflections, perfect bonding, plane stress per ply). The ABD constitutive system relates force/moment resultants to mid-plane strains and curvatures. Failure criteria: Tsai-Wu (quadratic tensor polynomial) and Hashin 1980 (physically-motivated fiber/matrix splitting modes). Simulated Annealing drives the stacking optimizer - accepts worse solutions probabilistically at high temperature to escape local minima.',
       },
       {
         title: 'Connection to SAMPE',
-        body: 'The Python Simulated Annealing optimizer in this toolkit directly generated the [0/±45/90]s stacking sequence used in the SAMPE competition fuselage — the sequence that achieved 38% deflection reduction over the baseline [0/90]s schedule. CalculiX FEA cross-validation confirmed the prediction before a single sheet of prepreg was cut.',
+        body: 'The Python Simulated Annealing optimizer in this toolkit directly generated the [0/±45/90]s stacking sequence used in the SAMPE competition fuselage - the sequence that achieved 38% deflection reduction over the baseline [0/90]s schedule. CalculiX FEA cross-validation confirmed the prediction before a single sheet of prepreg was cut.',
       },
     ],
     skills: ['Classical Lamination Theory', 'Simulated Annealing', 'CalculiX FEA', 'Python', 'NumPy', 'Tsai-Wu Criterion', 'Hashin 1980 Criterion', 'ABD Matrices', 'Navier Series', 'Composites Design'],
@@ -360,7 +360,7 @@ const DETAIL_PAGES = {
     type: 'experience',
     tag: 'Industry',
     title: 'Quality Assurance & MRB Coordinator',
-    meta: 'Tata Advanced Systems Ltd · QC Inspector → MRB Coordinator · Oct 2022–Mar 2023 · Nagpur, India',
+    meta: 'Tata Advanced Systems Ltd · QC Inspector to MRB Coordinator · Oct 2022 - Mar 2023 · Hyderabad, India',
     highlight: '450+ aerospace components inspected for GE Aerospace & Boeing programs',
     accent: 'blue',
     metrics: [
@@ -375,16 +375,16 @@ const DETAIL_PAGES = {
         title: 'Role Progression',
         steps: [
           'QC Inspector (Months 1–3): Dimensional inspection using CMM (0.02mm accuracy), surface roughness testing, and GD&T interpretation. Achieved 100% report accuracy with zero customer escapes on GE/Boeing programs.',
-          'MRB Coordinator (Months 4–6): Promoted to lead cross-functional Material Review Board meetings — coordinating disposition decisions between quality, engineering, and production for nonconforming parts.',
+          'MRB Coordinator (Months 4–6): Promoted to lead cross-functional Material Review Board meetings - coordinating disposition decisions between quality, engineering, and production for nonconforming parts.',
         ],
       },
       {
         title: 'Root Cause Analysis',
-        body: 'Identified CNC tool wear as the source of recurring position-tolerance violations affecting 15% of batches. Implemented tool-life tracking using SPC — triggering replacement at a statistical signal rather than a calendar schedule. Defect rate on the monitored feature dropped from 15% to under 3% within three months.',
+        body: 'Identified CNC tool wear as the source of recurring position-tolerance violations affecting 15% of batches. Implemented tool-life tracking using SPC - triggering replacement at a statistical signal rather than a calendar schedule. Defect rate on the monitored feature dropped from 15% to under 3% within three months.',
       },
       {
         title: 'Supplier FMEA & Scrap Recovery',
-        body: 'Led FMEA investigation when a supplier delivered aluminum alloy below specification — affecting 200+ parts. Negotiated use-as-is MRB disposition with engineering, backed by stress analysis confirming adequate margin for the non-critical bracket application. Recovered ₹2.5L in scrap value and maintained production schedule without delay.',
+        body: 'Led FMEA investigation when a supplier delivered aluminum alloy below specification - affecting 200+ parts. Negotiated use-as-is MRB disposition with engineering, backed by stress analysis confirming adequate margin for the non-critical bracket application. Recovered ₹2.5L in scrap value and maintained production schedule without delay.',
       },
       {
         title: 'Process Optimization',
@@ -392,7 +392,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Working with Aerospace Standards',
-        body: 'Every part inspected was destined for GE Aerospace jet engines or Boeing aircraft — zero margin for quality escapes. Working under AS9100 and Boeing supplier quality requirements grounded Six Sigma methodology in real-world aerospace production constraints.',
+        body: 'Every part inspected was destined for GE Aerospace jet engines or Boeing aircraft - zero margin for quality escapes. Working under AS9100 and Boeing supplier quality requirements grounded Six Sigma methodology in real-world aerospace production constraints.',
       },
     ],
     skills: ['CMM Operation', 'GD&T (ASME Y14.5)', '8D Problem Solving', 'pFMEA', 'Statistical Process Control', 'Root Cause Analysis', 'AS9100 / ISO 9001', 'MRB Coordination'],
@@ -402,42 +402,36 @@ const DETAIL_PAGES = {
     type: 'experience',
     tag: 'Research',
     title: 'Graduate Research Assistant',
-    meta: 'Beckman Institute, UIUC · Autonomous Materials Systems Lab · May–Dec 2024 · Urbana, IL',
-    highlight: '8-hour cure cycle optimization reduced to 5 minutes · 94% faster than classical DOE',
+    meta: 'Beckman Institute, UIUC · Autonomous Materials Systems Lab · May 2024 - Dec 2024 · Urbana, IL',
+    highlight: 'Out-of-autoclave cure via frontal polymerization: 8+ hour cycle reduced to under 5 minutes',
     accent: 'blue',
     metrics: [
-      { val: '8h → 5m', lbl: 'Optimization Time' },
-      { val: '-94%', lbl: 'Wall-Clock Reduction' },
-      { val: '+12°C', lbl: 'Tg Margin Gained' },
-      { val: '38', lbl: 'Runs / Day' },
+      { val: '8h → 5m', lbl: 'Cure Cycle' },
+      { val: '94%', lbl: 'Faster Optimization' },
+      { val: '10%', lbl: 'Velocity Accuracy' },
+      { val: '3°C', lbl: 'Temp. Error' },
     ],
     images: [],
     sections: [
       {
-        title: 'The Problem',
-        body: 'Traditional cure cycle development for thermoset composites requires overnight Design of Experiments sweeps — one time/temperature/pressure combination per autoclave run, each taking 8+ hours. Finding the optimal cure schedule for a new resin system typically requires 30–50 runs, meaning weeks of calendar time and substantial material cost.',
+        title: 'Research Focus',
+        body: 'Developed and validated an out-of-autoclave cure method using frontal polymerization - a self-propagating reaction front that cures thermoset composites in under 5 minutes, compared to 8+ hour conventional autoclave cycles. Work conducted at the Autonomous Materials Systems Lab under Prof. Philippe H. Geubelle.',
       },
       {
-        title: 'What Was Built',
-        body: 'A closed-loop Bayesian optimizer for resin cure cycles. Instead of exhaustive DOE sweeps, the Bayesian engine builds a probabilistic surrogate model (Gaussian Process) of the cure response surface, selects the next experiment that maximizes Expected Improvement, and converges to the optimal time/temperature/pressure schedule in a fraction of the runs — same glass transition temperature (Tg) target, 94% faster to get there.',
-      },
-      {
-        title: 'Technical Approach',
+        title: 'Computational Modeling',
         steps: [
-          '01 — DSC (Differential Scanning Calorimetry) baselines to characterize neat resin cure kinetics',
-          '02 — Gaussian Process surrogate model built from initial experimental runs',
-          '03 — Bayesian optimization loop: Expected Improvement acquisition function selects next experiment',
-          '04 — Closed-loop interface to autoclave controller — no manual reprogramming between runs',
-          '05 — Convergence achieved in ~8 runs vs 40+ with classical full-factorial DOE',
-          '06 — Results: +12°C Tg margin over baseline cure schedule at equivalent cycle time',
+          '01 - Developed level-set and reaction-diffusion models using the MOOSE finite element framework',
+          '02 - Implemented Adaptive Mesh Refinement concentrating elements at the moving reaction front',
+          '03 - Predicted front velocity within 10% accuracy and peak temperatures within 3°C of experimental results',
+          '04 - Accelerated process parameter optimization by 94% compared to full reaction-diffusion simulation',
         ],
       },
       {
-        title: 'Impact',
-        body: 'The 94% reduction in optimization wall-clock time (8 hours → 5 minutes per optimization iteration) unlocked same-day iteration — enabling 38 experimental runs per day versus the previous 1–2. This compresses what was a multi-week material characterization effort into a single day\'s work. Paper draft submitted December 2024.',
+        title: 'Physical Fabrication and Characterization',
+        body: 'Fabricated thermoset composite specimens via frontal polymerization and characterized mechanical properties. Correlated cure parameters - initiator concentration and fiber volume fraction - to final composite quality, validating computational predictions against physical specimens.',
       },
     ],
-    skills: ['Bayesian Optimization', 'Gaussian Process Regression', 'DSC (Differential Scanning Calorimetry)', 'Autoclave Operations', 'Cure Kinetics Modeling', 'Python', 'Classical Lamination Theory', 'Design of Experiments', 'Scientific Writing'],
+    skills: ['Frontal Polymerization', 'MOOSE Framework', 'Level-Set Methods', 'Adaptive Mesh Refinement', 'Composite Fabrication', 'Mechanical Characterization', 'C++', 'Python', 'Scientific Writing'],
   },
 
   'exp-eqic': {
@@ -457,32 +451,32 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'Company & Context',
-        body: 'EQIC is a precision tooling supplier specializing in High-Pressure Die Casting (HPDC) dies for automotive clients including Lucas TVS, Hyundai, and Mahindra. Their dies produce aluminum components for engine blocks, transmission housings, and structural castings — each die represents 300–500 hours of skilled tool-room work and must hold ±0.02mm on critical cavity surfaces.',
+        body: 'EQIC is a precision tooling supplier specializing in High-Pressure Die Casting (HPDC) dies for automotive clients including Lucas TVS, Hyundai, and Mahindra. Their dies produce aluminum components for engine blocks, transmission housings, and structural castings - each die represents 300–500 hours of skilled tool-room work and must hold ±0.02mm on critical cavity surfaces.',
       },
       {
         title: 'The Assignment',
-        body: 'Tracked a UNIRAC HPDC die through its complete manufacturing lifecycle — from design review to trial shots — documenting each process stage, verifying GD&T on CMM, and running process FMEAs on EDM and grinding operations. Produced a cycle-time atlas of the complete 12-stage workflow.',
+        body: 'Tracked a UNIRAC HPDC die through its complete manufacturing lifecycle - from design review to trial shots - documenting each process stage, verifying GD&T on CMM, and running process FMEAs on EDM and grinding operations. Produced a cycle-time atlas of the complete 12-stage workflow.',
       },
       {
         title: '12-Stage Workflow Documented',
         steps: [
-          '01 — Die design review: parting line optimization, cooling channel layout, ejector pin placement',
-          '02 — CAM programming: toolpath generation for rough and finish milling operations',
-          '03 — CNC rough milling: P20 tool steel block, ±0.1mm tolerance',
-          '04 — CNC finish milling: ±0.02mm on cavity surfaces and datum references',
-          '05 — Heat treatment: hardening + tempering to 48–52 HRC, then stress relieving',
-          '06 — Wire EDM: complex parting line geometries and tight-tolerance slots',
-          '07 — Sinker EDM: core pin pockets, lettering cavities, draft-angle features',
-          '08 — Surface grinding: reference surface flatness and parallelism to datum A',
-          '09 — Hand polishing: mirror finish on A-surface cavities (Ra < 0.4μm)',
-          '10 — CMM inspection: full GD&T verification at ±0.02mm against CAD nominal',
-          '11 — Assembly: die halves, ejector pins, cooling line connections',
-          '12 — Trial shots: fill pattern validation, part quality review, first-article acceptance',
+          '01 - Die design review: parting line optimization, cooling channel layout, ejector pin placement',
+          '02 - CAM programming: toolpath generation for rough and finish milling operations',
+          '03 - CNC rough milling: P20 tool steel block, ±0.1mm tolerance',
+          '04 - CNC finish milling: ±0.02mm on cavity surfaces and datum references',
+          '05 - Heat treatment: hardening + tempering to 48–52 HRC, then stress relieving',
+          '06 - Wire EDM: complex parting line geometries and tight-tolerance slots',
+          '07 - Sinker EDM: core pin pockets, lettering cavities, draft-angle features',
+          '08 - Surface grinding: reference surface flatness and parallelism to datum A',
+          '09 - Hand polishing: mirror finish on A-surface cavities (Ra < 0.4μm)',
+          '10 - CMM inspection: full GD&T verification at ±0.02mm against CAD nominal',
+          '11 - Assembly: die halves, ejector pins, cooling line connections',
+          '12 - Trial shots: fill pattern validation, part quality review, first-article acceptance',
         ],
       },
       {
         title: 'Key Takeaway',
-        body: 'A single tooling defect gets replicated in every part the die produces — potentially 50,000+ parts before detection. Understanding the precision and effort behind die manufacturing now directly shapes how I design composite parts and write manufacturing plans: I explicitly call out die-side tolerances, draft angles, ejection constraints, and parting line locations that would otherwise create expensive tooling rework cycles.',
+        body: 'A single tooling defect gets replicated in every part the die produces - potentially 50,000+ parts before detection. Understanding the precision and effort behind die manufacturing now directly shapes how I design composite parts and write manufacturing plans: I explicitly call out die-side tolerances, draft angles, ejection constraints, and parting line locations that would otherwise create expensive tooling rework cycles.',
       },
     ],
     skills: ['HPDC Die Design', 'CNC Machining (Rough & Finish)', 'Wire/Sinker EDM', 'Heat Treatment (HRC)', 'CMM Inspection', 'GD&T (ASME Y14.5)', 'pFMEA', 'SolidWorks', 'Process Documentation'],
@@ -565,7 +559,7 @@ function DetailModal({ id, onClose }) {
             ))}
           </div>
 
-          {/* Hero image — full width, no thumbnails */}
+          {/* Hero image - full width, no thumbnails */}
           {page.heroImage && (
             <div className="dp-gallery">
               <div className="dp-gallery__hero">
@@ -580,7 +574,7 @@ function DetailModal({ id, onClose }) {
             </div>
           )}
 
-          {/* Content sections — images placed contextually within each section */}
+          {/* Content sections - images placed contextually within each section */}
           <div className="dp-sections">
             {page.sections.map((s, i) => (
               <div key={i} className="dp-section">
@@ -617,7 +611,7 @@ function DetailModal({ id, onClose }) {
                   </>
                 )}
 
-                {/* Section gallery — row of images below section content */}
+                {/* Section gallery - row of images below section content */}
                 {s.gallery && s.gallery.length > 0 && (
                   <div className="dp-section__gallery">
                     {s.gallery.map((img, j) => (

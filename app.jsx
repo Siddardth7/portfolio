@@ -1,4 +1,4 @@
-// Root app — wires Tweaks to design knobs
+// Root app - wires Tweaks to design knobs
 const useEffect = React.useEffect;
 const useState = React.useState;
 

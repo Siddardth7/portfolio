@@ -1,4 +1,4 @@
-// Portfolio v2 — interactive aerospace-themed components
+// Portfolio v2 - interactive aerospace-themed components
 // Adds: HUD nav, radar hero, scroll-progress instrument cluster,
 // tabbed Lab/Code workbench, live SPC chart, rotating DMAIC ring,
 // scroll-reveal panels, telemetry overlays.
@@ -175,7 +175,7 @@ function Nav() {
 }
 
 // ─────────────────────────────────────────────────────────
-// Hero — Character Sheet
+// Hero - Character Sheet
 // ─────────────────────────────────────────────────────────
 const CS_SKILLS = [
   'pFMEA (AIAG FMEA-4)', 'SPC / Cp/Cpk', '8D Problem Solving',
@@ -223,7 +223,7 @@ function Hero() {
             <p className="cs__bio">
               Hi, I'm <strong>Siddardth Pathipaka</strong>, an M.S. Aerospace Engineering
               candidate at <span className="cs__accent">UIUC</span>. I specialize in quality
-              systems, Six Sigma methodology, and composites manufacturing — from{' '}
+              systems, Six Sigma methodology, and composites manufacturing - from{' '}
               <strong>8D problem-solving that cut nonconformance cycle time by 22%</strong> at
               Tata Boeing Aerospace, to building live SPC and pFMEA tools that automate what
               engineers do in spreadsheets.
@@ -319,7 +319,7 @@ function HeroBackdrop() {
   );
 }
 
-// Quality Engineering Dashboard — replaces the composite weave in the hero.
+// Quality Engineering Dashboard - replaces the composite weave in the hero.
 // Immediately communicates "quality engineering" to any hiring manager.
 // DMAIC phases are clickable; SPC chart animates live.
 function QualityDashboard() {
@@ -417,7 +417,7 @@ function QualityDashboard() {
   );
 }
 
-// Interactive composite weave + airfoil pressure plot — replaces the radar.
+// Interactive composite weave + airfoil pressure plot - replaces the radar.
 // Mouse moves the AOA/inspection point; the weave stress field updates live.
 function CompositeWeave() {
   const [pt, setPt] = useState({ x: 0.62, y: 0.42 });
@@ -524,7 +524,7 @@ function CompositeWeave() {
   );
 }
 
-// Section rail — full-width interactive horizontal section index at bottom of hero.
+// Section rail - full-width interactive horizontal section index at bottom of hero.
 // Replaces the small HUD scroll bar with a big legible bar.
 function SectionRail() {
   const sections = [
@@ -619,7 +619,7 @@ function SectionHeader({ kicker, title, subtitle, accent, count }) {
 }
 
 // ─────────────────────────────────────────────────────────
-// Built in the Lab — interactive workbench
+// Built in the Lab - interactive workbench
 // ─────────────────────────────────────────────────────────
 const LAB_PROJECTS = [
   {
@@ -672,7 +672,7 @@ function LabSection() {
         <SectionHeader
           kicker="01 / HARDWARE · 2021–2025"
           title={<>Projects Built in the Lab<span className="title-cursor" aria-hidden="true"></span></>}
-          subtitle="From competition floors to university labs — hands-on engineering with measurable results."
+          subtitle="From competition floors to university labs - hands-on engineering with measurable results."
           accent="green"
           count={`04 PROJECTS`}
         />
@@ -858,7 +858,7 @@ function Schematic({ kind, index }) {
   );
 }
 // ─────────────────────────────────────────────────────────
-// Built in Code — terminal stack with live SPC chart
+// Built in Code - terminal stack with live SPC chart
 // ─────────────────────────────────────────────────────────
 const CODE_TOOLS = [
   {
@@ -896,7 +896,7 @@ function CodeSection() {
         <SectionHeader
           kicker="02 / SOFTWARE · DEPLOYED"
           title={<>Built Projects in Code<span className="title-cursor title-cursor--amber" aria-hidden="true"></span></>}
-          subtitle={<>I build the tools quality engineers wish they had. Each runs live — built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>160+ unit tests</strong> across all three.</>}
+          subtitle={<>I build the tools quality engineers wish they had. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>160+ unit tests</strong> across all three.</>}
           accent="amber"
           count="03 TOOLS"
         />
@@ -1086,7 +1086,7 @@ const ROLES = [
     type: 'Research', title: 'Graduate Research Assistant', detailId: 'exp-beckman',
     company: 'Beckman Institute, UIUC', dates: 'May–Dec 2024',
     location: 'Urbana, IL',
-    summary: 'Built a closed-loop optimizer for resin cure cycles. Replaced overnight DOE sweeps with a Bayesian search over time/temp/pressure that converges in minutes — same Tg target, 94% less wall-clock.',
+    summary: 'Built a closed-loop optimizer for resin cure cycles. Replaced overnight DOE sweeps with a Bayesian search over time/temp/pressure that converges in minutes - same Tg target, 94% less wall-clock.',
     metricBits: [['8h → 5m', 'cure cycle'], ['-94%', 'optimization'], ['+12°C', 'Tg margin'], ['38', 'runs/day']],
     timeline: [
       { t: 'M 01', label: 'Literature · DSC baselines' },
@@ -1119,7 +1119,7 @@ function ExperienceSection() {
         <SectionHeader
           kicker="03 / EXPERIENCE · 2022–2024"
           title="Experience"
-          subtitle="Three engagements across aerospace MRB, university research, and tool-room manufacturing — each with a measurable handoff."
+          subtitle="Three engagements across aerospace MRB, university research, and tool-room manufacturing - each with a measurable handoff."
           accent="blue"
           count="03 ROLES"
         />
@@ -1206,7 +1206,7 @@ function ExperienceRow({ type, title, company, dates, location, summary, metricB
 }
 
 // ─────────────────────────────────────────────────────────
-// Skills & Credentials — featured Six Sigma badge
+// Skills & Credentials - featured Six Sigma badge
 // ─────────────────────────────────────────────────────────
 const SKILL_GROUPS = [
   { title: 'Quality Engineering', items: ['pFMEA (AIAG FMEA-4)', 'SPC', '8D Problem Solving', 'RCCA', 'CAPA', 'CMM Inspection', 'GD&T (ASME Y14.5)', 'First Article Inspection', 'MRB Disposition'] },
@@ -1371,7 +1371,7 @@ function DMAICRing({ variant }) {
                    fill="rgba(16,185,129,0.08)" stroke="url(#ringGrad)" strokeWidth="2"/>
         )}
 
-        {/* CSSC seal arc text — top */}
+        {/* CSSC seal arc text - top */}
         <text fontFamily="Space Grotesk" fontWeight="700" fontSize="9" fill="#34d399" letterSpacing="2.5">
           <textPath href="#ringPath" startOffset="34%">SIX SIGMA CERTIFIED</textPath>
         </text>
@@ -1380,7 +1380,7 @@ function DMAICRing({ variant }) {
           <textPath href="#ringPathBot" startOffset="38%">★ COUNCIL · CSSC ★</textPath>
         </text>
 
-        {/* belt graphic — green with knot/loop */}
+        {/* belt graphic - green with knot/loop */}
         <g transform="translate(100 78)">
           <rect x="-26" y="-4" width="52" height="8" rx="1" fill="url(#beltGrad)" stroke="#065f46" strokeWidth="0.6"/>
           <rect x="-3" y="-6" width="6" height="12" fill="#065f46"/>
@@ -1452,7 +1452,7 @@ function SecondaryCert() {
   );
 }
 
-// Stylized NPTEL-inspired mark — orange/blue, no exact logo reproduction.
+// Stylized NPTEL-inspired mark - orange/blue, no exact logo reproduction.
 function NPTELMark() {
   return (
     <div className="medallion medallion--nptel" aria-hidden="true">
@@ -1595,7 +1595,7 @@ function ContactSection() {
             <span className="availability__pulse" aria-hidden="true"></span>
             <div>
               <p className="mono availability__lbl">CURRENT STATUS</p>
-              <p className="availability__txt">Available — replies within 24h</p>
+              <p className="availability__txt">Available - replies within 24h</p>
             </div>
           </div>
         </div>
@@ -1609,7 +1609,7 @@ function ContactSection() {
           <Field label="Message" multiline value={form.message} onChange={(v) => setForm({ ...form, message: v })} onBlur={() => setTouched({ ...touched, message: true })} error={touched.message && errors.message} />
           <button type="submit" className={`btn btn--primary btn--block ${sent ? 'btn--sent' : ''}`} disabled={sent}>
             {sent ? (
-              <><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7.5l3 3 5-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Message sent — I'll be in touch</>
+              <><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7.5l3 3 5-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Message sent - I'll be in touch</>
             ) : (
               <>Send Message<svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M3 6.5h7M10 6.5l-3-3M10 6.5l-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg></>
             )}
