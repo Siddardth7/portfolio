@@ -225,7 +225,7 @@ function Hero() {
               candidate at <span className="cs__accent">UIUC</span>. I specialize in quality
               systems, Six Sigma methodology, and composites manufacturing - from{' '}
               <strong>8D problem-solving that cut nonconformance cycle time by 22%</strong> at
-              Tata Advanced Systems Ltd, to building live SPC and pFMEA tools that automate what
+              Tata Boeing Aerospace, to building live SPC and pFMEA tools that automate what
               engineers do in spreadsheets.
             </p>
 
@@ -290,7 +290,7 @@ function Hero() {
             </div>
 
             <p className="cs__footer-tagline mono">
-              Tata Advanced Systems Ltd · UIUC · Beckman Institute · 160+ Unit Tests
+              Tata Boeing Aerospace · UIUC · Beckman Institute · 160+ Unit Tests
             </p>
 
           </div>
@@ -1070,7 +1070,7 @@ function LayupViz({ hover }) {
 const ROLES = [
   {
     type: 'Industry', title: 'Quality Assurance & MRB Coordinator', detailId: 'exp-tata',
-    company: 'Tata Advanced Systems Ltd', dates: 'Oct 2022 - Mar 2023',
+    company: 'Tata Boeing Aerospace', dates: 'Oct 2022 - Mar 2023',
     location: 'Hyderabad, India',
     summary: 'Audited CMM inspection records for 450+ flight-critical components on GE and Boeing programs. Introduced 8D problem-solving to MRB disposition, reducing NCR cycle time by 22% and defect rate from 15% to under 3%.',
     metricBits: [['450+', 'parts inspected'], ['22%', 'cycle time ↓'], ['15→3%', 'defect rate'], ['₹2.5L', 'scrap recovered']],

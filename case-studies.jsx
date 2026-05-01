@@ -360,8 +360,8 @@ const DETAIL_PAGES = {
     type: 'experience',
     tag: 'Industry',
     title: 'Quality Assurance & MRB Coordinator',
-    meta: 'Tata Advanced Systems Ltd · QC Inspector to MRB Coordinator · Oct 2022 - Mar 2023 · Hyderabad, India',
-    highlight: '450+ aerospace components inspected for GE Aerospace & Boeing programs',
+    meta: 'Tata Boeing Aerospace · QC Inspector to MRB Coordinator · Oct 2022 - Mar 2023 · Hyderabad, India',
+    highlight: '450+ flight-critical components inspected for CFM LEAP engine programs powering Boeing 737 MAX and Airbus A320neo',
     accent: 'blue',
     metrics: [
       { val: '450+', lbl: 'Parts Inspected' },
@@ -392,7 +392,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Working with Aerospace Standards',
-        body: 'Every part inspected was destined for GE Aerospace jet engines or Boeing aircraft - zero margin for quality escapes. Working under AS9100 and Boeing supplier quality requirements grounded Six Sigma methodology in real-world aerospace production constraints.',
+        body: 'The components inspected were flight hardware for the CFM International LEAP engine - the fastest-selling engine in commercial aviation history, powering Boeing 737 MAX and Airbus A320neo family aircraft. With 14,000+ engine orders and production ramping to 2,000 engines per year, zero quality escapes was not a slogan - it was a production requirement. Working under AS9100 and Boeing supplier quality requirements gave real-world grounding to Six Sigma methodology that no classroom can replicate.',
       },
     ],
     skills: ['CMM Operation', 'GD&T (ASME Y14.5)', '8D Problem Solving', 'pFMEA', 'Statistical Process Control', 'Root Cause Analysis', 'AS9100 / ISO 9001', 'MRB Coordination'],
