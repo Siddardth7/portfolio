@@ -225,7 +225,7 @@ function Hero() {
               candidate at <span className="cs__accent">UIUC</span>. I specialize in quality
               systems, Six Sigma methodology, and composites manufacturing - from{' '}
               <strong>8D problem-solving that cut nonconformance cycle time by 22%</strong> at
-              Tata Boeing Aerospace, to building live SPC and pFMEA tools that automate what
+              Tata Advanced Systems Ltd, to building live SPC and pFMEA tools that automate what
               engineers do in spreadsheets.
             </p>
 
@@ -290,7 +290,7 @@ function Hero() {
             </div>
 
             <p className="cs__footer-tagline mono">
-              Tata Boeing Aerospace · UIUC · Beckman Institute · 160+ Unit Tests
+              Tata Advanced Systems Ltd · UIUC · Beckman Institute · 160+ Unit Tests
             </p>
 
           </div>
@@ -896,7 +896,7 @@ function CodeSection() {
         <SectionHeader
           kicker="02 / SOFTWARE · DEPLOYED"
           title={<>Built Projects in Code<span className="title-cursor title-cursor--amber" aria-hidden="true"></span></>}
-          subtitle={<>I build the tools quality engineers wish they had. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>160+ unit tests</strong> across all three.</>}
+          subtitle={<>Production-grade tools for quality and composites engineering. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>160+ unit tests</strong> across all three.</>}
           accent="amber"
           count="03 TOOLS"
         />
@@ -1069,32 +1069,32 @@ function LayupViz({ hover }) {
 // ─────────────────────────────────────────────────────────
 const ROLES = [
   {
-    type: 'Industry', title: 'Quality and MRB Intern', detailId: 'exp-tata',
-    company: 'Tata Boeing Aerospace', dates: 'Oct 2022–Mar 2023',
-    location: 'Nagpur, India',
-    summary: 'Embedded with the AH-64 Apache fuselage line. Introduced 8D problem-solving to MRB disposition, drove Pareto-led RCCA on top failure modes, and rebuilt the FAI process for nonconforming composites.',
-    metricBits: [['-22%', 'NCR cycle time'], ['15→3%', 'defect rate'], ['~$3k', 'scrap recovered'], ['AS9100', 'standard']],
+    type: 'Industry', title: 'Quality Assurance & MRB Coordinator', detailId: 'exp-tata',
+    company: 'Tata Advanced Systems Ltd', dates: 'Oct 2022 - Mar 2023',
+    location: 'Hyderabad, India',
+    summary: 'Audited CMM inspection records for 450+ flight-critical components on GE and Boeing programs. Introduced 8D problem-solving to MRB disposition, reducing NCR cycle time by 22% and defect rate from 15% to under 3%.',
+    metricBits: [['450+', 'parts inspected'], ['22%', 'cycle time ↓'], ['15→3%', 'defect rate'], ['₹2.5L', 'scrap recovered']],
     timeline: [
-      { t: 'WK 01', label: 'Onboarded · MRB shadow' },
-      { t: 'WK 04', label: '8D rolled out · top-3 modes' },
-      { t: 'WK 12', label: 'CAPA loop closed · 22% ↓' },
-      { t: 'WK 24', label: 'Standard work published' },
+      { t: 'M 1-3', label: 'QC Inspector · CMM inspection' },
+      { t: 'M 4', label: '8D rolled out · top-3 defect modes' },
+      { t: 'M 5', label: 'SPC corrective actions · defect rate ↓' },
+      { t: 'M 6', label: 'MRB Coordinator · standard work published' },
     ],
-    skills: ['8D', 'pFMEA', 'AS9100', 'GD&T', 'CMM', 'AIAG FMEA-4'],
+    skills: ['CMM Inspection', 'GD&T', '8D Problem Solving', 'pFMEA', 'SPC', 'AS9100'],
   },
   {
     type: 'Research', title: 'Graduate Research Assistant', detailId: 'exp-beckman',
-    company: 'Beckman Institute, UIUC', dates: 'May–Dec 2024',
+    company: 'Beckman Institute, UIUC', dates: 'May 2024 - Dec 2024',
     location: 'Urbana, IL',
-    summary: 'Built a closed-loop optimizer for resin cure cycles. Replaced overnight DOE sweeps with a Bayesian search over time/temp/pressure that converges in minutes - same Tg target, 94% less wall-clock.',
-    metricBits: [['8h → 5m', 'cure cycle'], ['-94%', 'optimization'], ['+12°C', 'Tg margin'], ['38', 'runs/day']],
+    summary: 'Developed and validated an out-of-autoclave cure method using frontal polymerization, reducing composite processing from 8+ hours to under 5 minutes. Predicted cure behavior within 10% velocity accuracy through computational modeling.',
+    metricBits: [['8h → 5m', 'cure cycle'], ['94%', 'faster optimization'], ['10%', 'velocity accuracy'], ['3°C', 'temp. error']],
     timeline: [
-      { t: 'M 01', label: 'Literature · DSC baselines' },
-      { t: 'M 03', label: 'Bayesian opt prototype' },
-      { t: 'M 05', label: 'Closed loop on autoclave' },
-      { t: 'M 08', label: 'Paper draft submitted' },
+      { t: 'M 01', label: 'Literature review · FP fundamentals' },
+      { t: 'M 03', label: 'MOOSE model development' },
+      { t: 'M 05', label: 'Level-set validation vs experiment' },
+      { t: 'M 08', label: 'Specimen fabrication + characterization' },
     ],
-    skills: ['Bayesian Opt', 'DSC', 'Autoclave', 'Python', 'CLT'],
+    skills: ['Frontal Polymerization', 'MOOSE Framework', 'Level-Set Methods', 'Composite Fabrication', 'Python'],
   },
   {
     type: 'Industry', title: 'Manufacturing Intern', detailId: 'exp-eqic',
