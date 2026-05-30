@@ -10,3 +10,6 @@ index (1).html
 .DS_Store
 *.pdf.bak
 node_modules/
+
+# Internal audit reports (not for publication)
+audit/

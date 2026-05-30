@@ -152,7 +152,7 @@ function Nav() {
           ))}
         </nav>
         <div className="nav__actions">
-          <a className="btn btn--primary btn--sm" href={RESUME_URL} target="_blank" rel="noreferrer">
+          <a className="btn btn--primary btn--sm" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M6 2v6M6 8L4 6M6 8l2-2M3 10h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -222,17 +222,17 @@ function Hero() {
 
             <p className="cs__bio">
               Hi, I'm <strong>Siddardth Pathipaka</strong>, an M.S. Aerospace Engineering
-              candidate at <span className="cs__accent">UIUC</span>. I specialize in quality
+              graduate (Dec 2025) from <span className="cs__accent">UIUC</span>. I specialize in quality
               systems, Six Sigma methodology, and composites manufacturing - from{' '}
               <strong>8D problem-solving that cut nonconformance cycle time by 22%</strong> at
-              Tata Boeing Aerospace, to building live SPC and pFMEA tools that automate what
+              Tata Advanced Systems Limited, to building live SPC and pFMEA tools that automate what
               engineers do in spreadsheets.
             </p>
 
             <div className="cs__section">
               <p className="cs__section-title mono">EDUCATION</p>
               <div className="cs__badges">
-                <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace Engineering · 2024–2026</span>
+                <span className="cs__badge mono">🎓 UIUC · M.S. Aerospace Engineering · Jan 2024 – Dec 2025</span>
                 <span className="cs__badge mono">🎓 VNR VJIET · B.Tech Mechanical Engineering · 2019–2023</span>
               </div>
             </div>
@@ -256,25 +256,25 @@ function Hero() {
               <p className="cs__section-title mono">CONNECT</p>
               <div className="cs__connect">
                 <a href="https://linkedin.com/in/siddardth-pathipaka" target="_blank"
-                   rel="noreferrer" className="cs__icon-btn" aria-label="LinkedIn">
+                   rel="noopener noreferrer" className="cs__icon-btn" aria-label="LinkedIn">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
                     <circle cx="4" cy="4" r="2"/>
                   </svg>
                 </a>
-                <a href="mailto:siddardth1524@gmail.com" className="cs__icon-btn" aria-label="Email" rel="noreferrer">
+                <a href="mailto:siddardth1524@gmail.com" className="cs__icon-btn" aria-label="Email" rel="noopener noreferrer">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <rect x="2" y="4" width="20" height="16" rx="2"/>
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                   </svg>
                 </a>
-                <a href="https://github.com/Siddardth7" target="_blank"
-                   rel="noreferrer" className="cs__icon-btn" aria-label="GitHub">
+                <a href="https://github.com/siddardth7" target="_blank"
+                   rel="noopener noreferrer" className="cs__icon-btn" aria-label="GitHub">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/>
                   </svg>
                 </a>
-                <a href={RESUME_URL} className="btn btn--primary btn--sm cs__resume-btn" target="_blank" rel="noreferrer">
+                <a href={RESUME_URL} className="btn btn--primary btn--sm cs__resume-btn" target="_blank" rel="noopener noreferrer">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M3 6h6M6 3v6M6 9l-2-2M6 9l2-2" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/>
                   </svg>
@@ -290,7 +290,7 @@ function Hero() {
             </div>
 
             <p className="cs__footer-tagline mono">
-              Tata Boeing Aerospace · UIUC · Beckman Institute · 160+ Unit Tests
+              Tata Advanced Systems Limited · UIUC · Beckman Institute · 140+ Unit Tests
             </p>
 
           </div>
@@ -635,21 +635,21 @@ const LAB_PROJECTS = [
     title: 'Electric Solar Vehicle Championship',
     role: 'Manufacturing Lead', date: '2019–2023',
     metricBits: [['7th', 'national'], ['180.43', '/200 cross pad']],
-    description: '7th place nationally · 180.43/200 Cross Pad · zero mechanical failures across four-year campaign.',
+    description: '7th place nationally · 180.43/200 Cross Pad · zero mechanical failures across 3.5-year build cycle.',
     schematic: 'vehicle',
   },
   {
     n: '03', tag: 'Academic', detailId: 'lab-borosilicate',
     title: 'Borosilicate Glass-Ceramic Composites',
     role: 'Project Lead', date: 'Aug 2022–Apr 2023',
-    metricBits: [['+27%', 'hardness'], ['24', 'formulations']],
-    description: '27% hardness improvement (548→699 HV) across 24 powder-metallurgy formulations with sintering-cycle DOE.',
+    metricBits: [['24.49%', 'hardness'], ['24', 'formulations']],
+    description: '24.49% hardness improvement (548→698.66 HV) across 24 powder-metallurgy formulations with sintering-cycle DOE.',
     schematic: 'specimen',
   },
   {
     n: '04', tag: 'Academic', detailId: 'lab-aero',
     title: 'SAE Aero Design Challenge',
-    role: 'CFD Lead', date: 'Aug 2021–Mar 2022',
+    role: 'Team Lead', date: 'Mar 2022–Oct 2022',
     metricBits: [['85%', 'CFD ↔ theory'], ['92"', 'tapered wing']],
     description: '85% CFD-to-theory correlation · 92" tapered wing validated in ANSYS Fluent against Prandtl lifting-line.',
     schematic: 'wing',
@@ -826,7 +826,7 @@ function Schematic({ kind, index }) {
             );
           })}
           <text x="240" y="60" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">FORMULATION MATRIX · 24×</text>
-          <text x="240" y="300" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">548 → 699 HV · +27%</text>
+          <text x="240" y="300" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">548 → 698.66 HV · 24.49%</text>
         </g>
       )}
       {kind === 'wing' && (
@@ -865,10 +865,10 @@ const CODE_TOOLS = [
     n: '01', name: 'FMEA Risk Analyzer', detailId: 'code-fmea',
     purpose: 'Automates AIAG FMEA-4 risk priority calculation and Pareto analysis from imported failure-mode data.',
     stack: ['Python', 'Streamlit', 'Plotly', 'AIAG FMEA-4'],
-    metric: '78', metricLbl: 'unit tests',
+    metric: '61', metricLbl: 'unit tests',
     hasDemo: true, viz: 'pareto',
     demoUrl: 'https://fmea-risk-analyzer-mhwzcki9sdzfz5d8rbzsdn.streamlit.app/',
-    githubUrl: 'https://github.com/Siddardth7/fmea-risk-analyzer',
+    githubUrl: 'https://github.com/siddardth7/fmea-risk-analyzer',
   },
   {
     n: '02', name: 'SPC Manufacturing Dashboard', detailId: 'code-spc',
@@ -877,7 +877,7 @@ const CODE_TOOLS = [
     metric: '83', metricLbl: 'unit tests',
     hasDemo: true, viz: 'spc',
     demoUrl: 'https://manufacturing-spc-dashboard-k8hyyj2fylnvjfrpcgqhyr.streamlit.app',
-    githubUrl: 'https://github.com/Siddardth7/manufacturing-spc-dashboard',
+    githubUrl: 'https://github.com/siddardth7/manufacturing-spc-dashboard',
   },
   {
     n: '03', name: 'Virtual Composite Design Toolkit', detailId: 'code-composite',
@@ -885,7 +885,7 @@ const CODE_TOOLS = [
     stack: ['Python', 'CLT', 'CalculiX FEA', 'Simulated Annealing'],
     metric: '<1%', metricLbl: 'FEA error',
     hasDemo: false, viz: 'layup',
-    githubUrl: 'https://github.com/Siddardth7/Virtual-Composite-Design-Optimization',
+    githubUrl: 'https://github.com/siddardth7/Virtual-Composite-Design-Optimization',
   },
 ];
 
@@ -896,7 +896,7 @@ function CodeSection() {
         <SectionHeader
           kicker="02 / SOFTWARE · DEPLOYED"
           title={<>Built Projects in Code<span className="title-cursor title-cursor--amber" aria-hidden="true"></span></>}
-          subtitle={<>Production-grade tools for quality and composites engineering. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>160+ unit tests</strong> across all three.</>}
+          subtitle={<>Production-grade tools for quality and composites engineering. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>140+ unit tests</strong> across all three.</>}
           accent="amber"
           count="03 TOOLS"
         />
@@ -947,7 +947,7 @@ function CodeCard({ n, name, purpose, stack, metric, metricLbl, hasDemo, viz, de
 
       <footer className="code-card__actions">
         {hasDemo ? (
-          <a className="btn btn--amber btn--sm" href={demoUrl} target="_blank" rel="noreferrer">
+          <a className="btn btn--amber btn--sm" href={demoUrl} target="_blank" rel="noopener noreferrer">
             <span className="btn__pulse" aria-hidden="true"></span>
             Live Demo
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
@@ -957,7 +957,7 @@ function CodeCard({ n, name, purpose, stack, metric, metricLbl, hasDemo, viz, de
         ) : (
           <span className="btn btn--disabled btn--sm mono">Source-only</span>
         )}
-        <a className="btn btn--ghost btn--sm" href={githubUrl} target="_blank" rel="noreferrer">
+        <a className="btn btn--ghost btn--sm" href={githubUrl} target="_blank" rel="noopener noreferrer">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
             <path d="M6 0a6 6 0 0 0-1.9 11.7c.3.05.4-.13.4-.29v-1c-1.66.36-2-.8-2-.8-.27-.69-.66-.87-.66-.87-.55-.37.04-.36.04-.36.6.04.92.62.92.62.54.92 1.4.65 1.74.5.05-.39.21-.65.38-.8-1.32-.15-2.71-.66-2.71-2.94 0-.65.23-1.18.62-1.6-.06-.15-.27-.76.06-1.59 0 0 .5-.16 1.65.61a5.7 5.7 0 0 1 3 0c1.14-.77 1.65-.61 1.65-.61.33.83.12 1.44.06 1.59.38.42.62.95.62 1.6 0 2.29-1.4 2.79-2.72 2.94.21.18.4.54.4 1.09v1.62c0 .16.1.34.4.28A6 6 0 0 0 6 0Z"/>
           </svg>
@@ -1069,25 +1069,25 @@ function LayupViz({ hover }) {
 // ─────────────────────────────────────────────────────────
 const ROLES = [
   {
-    type: 'Industry', title: 'Quality Assurance & MRB Coordinator', detailId: 'exp-tata',
-    company: 'Tata Boeing Aerospace', dates: 'Oct 2022 - Mar 2023',
+    type: 'Industry', title: 'Quality Assurance & MRB Intern', detailId: 'exp-tata',
+    company: 'Tata Advanced Systems Limited', dates: 'Oct 2022 - Mar 2023',
     location: 'Hyderabad, India',
-    summary: 'Audited CMM inspection records for 450+ flight-critical components on GE and Boeing programs. Introduced 8D problem-solving to MRB disposition, reducing NCR cycle time by 22% and defect rate from 15% to under 3%.',
-    metricBits: [['450+', 'parts inspected'], ['22%', 'cycle time ↓'], ['15→3%', 'defect rate'], ['₹2.5L', 'scrap recovered']],
+    summary: 'Audited CMM inspection records for 450+ flight-critical components on GE Aerospace LEAP engine programs. Introduced 8D problem-solving to MRB disposition, reducing NCR cycle time by 22% and defect rate from 15% to under 3%.',
+    metricBits: [['450+', 'parts inspected'], ['22%', 'cycle time ↓'], ['15→3%', 'defect rate'], ['$3,000', 'scrap avoided']],
     timeline: [
       { t: 'M 1-3', label: 'QC Inspector · CMM inspection' },
       { t: 'M 4', label: '8D rolled out · top-3 defect modes' },
       { t: 'M 5', label: 'SPC corrective actions · defect rate ↓' },
-      { t: 'M 6', label: 'MRB Coordinator · standard work published' },
+      { t: 'M 6', label: 'MRB interim coordination with QM' },
     ],
     skills: ['CMM Inspection', 'GD&T', '8D Problem Solving', 'pFMEA', 'SPC', 'AS9100'],
   },
   {
     type: 'Research', title: 'Graduate Research Assistant', detailId: 'exp-beckman',
-    company: 'Beckman Institute, UIUC', dates: 'May 2024 - Dec 2024',
+    company: 'Beckman Institute, UIUC', dates: 'Aug 2024 - Dec 2024',
     location: 'Urbana, IL',
     summary: 'Developed and validated an out-of-autoclave cure method using frontal polymerization, reducing composite processing from 8+ hours to under 5 minutes. Predicted cure behavior within 10% velocity accuracy through computational modeling.',
-    metricBits: [['8h → 5m', 'cure cycle'], ['94%', 'faster optimization'], ['10%', 'velocity accuracy'], ['3°C', 'temp. error']],
+    metricBits: [['8h → 5m', 'cure cycle'], ['40%', 'oscillation ↓'], ['10%', 'velocity accuracy'], ['3°C', 'temp. error']],
     timeline: [
       { t: 'M 01', label: 'Literature review · FP fundamentals' },
       { t: 'M 03', label: 'MOOSE model development' },
@@ -1212,7 +1212,7 @@ const SKILL_GROUPS = [
   { title: 'Quality Engineering', items: ['pFMEA (AIAG FMEA-4)', 'SPC', '8D Problem Solving', 'RCCA', 'CAPA', 'CMM Inspection', 'GD&T (ASME Y14.5)', 'First Article Inspection', 'MRB Disposition'] },
   { title: 'Process & Manufacturing', items: ['Lean Principles', 'Prepreg Layup & Autoclave', 'Cure Cycle Development', 'Out-of-Autoclave Methods', 'Powder Metallurgy', 'CNC Machining', 'Wire/Sinker EDM', 'HPDC Process'] },
   { title: 'Software & Simulation', items: ['Python', 'Streamlit', 'ABAQUS FEA', 'Classical Lamination Theory', 'ANSYS Fluent', 'SolidWorks', 'MATLAB', 'AutoCAD'] },
-  { title: 'Standards', items: ['AIAG FMEA-4/VDA', 'AS9100', 'ASME Y14.5', 'ASTM E384', 'MIL-HDBK-17'] },
+  { title: 'Standards', items: ['AIAG FMEA-4', 'AIAG SPC 4th Ed', 'AS9100', 'AS9102 FAIR', 'ASME Y14.5', 'ASTM E384'] },
 ];
 
 function SkillsSection({ medallionStyle }) {
@@ -1279,7 +1279,7 @@ function SixSigmaBadge({ medallionStyle }) {
       <div className="cert-card__corner cert-card__corner--br" aria-hidden="true"></div>
       <div className="cert-card__head">
         <span className="cert-card__kicker mono">★ FEATURED CREDENTIAL</span>
-        <span className="cert-card__id mono">CSSC · ID PENDING-VERIFY</span>
+        <span className="cert-card__id mono">CSSC</span>
       </div>
       <div className="cert-card__main">
         <DMAICRing variant={medallionStyle} />
@@ -1577,8 +1577,8 @@ function ContactSection() {
           </p>
           <ul className="contact-channels">
             <li><span className="mono contact-channels__lbl">EMAIL</span><a href="mailto:siddardth1524@gmail.com">siddardth1524@gmail.com</a></li>
-            <li><span className="mono contact-channels__lbl">LINKEDIN</span><a href="https://linkedin.com/in/siddardth-pathipaka" target="_blank" rel="noreferrer">linkedin.com/in/siddardth-pathipaka</a></li>
-            <li><span className="mono contact-channels__lbl">GITHUB</span><a href="https://github.com/Siddardth7" target="_blank" rel="noreferrer">github.com/Siddardth7</a></li>
+            <li><span className="mono contact-channels__lbl">LINKEDIN</span><a href="https://linkedin.com/in/siddardth-pathipaka" target="_blank" rel="noopener noreferrer">linkedin.com/in/siddardth-pathipaka</a></li>
+            <li><span className="mono contact-channels__lbl">GITHUB</span><a href="https://github.com/siddardth7" target="_blank" rel="noopener noreferrer">github.com/siddardth7</a></li>
           </ul>
 
           <div className="role-fit">

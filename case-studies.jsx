@@ -124,11 +124,11 @@ const DETAIL_PAGES = {
     tag: 'Academic',
     title: 'Borosilicate Glass-Ceramic Composites',
     meta: 'Project Lead (Undergraduate Thesis) · VNR VJIET · Aug 2022–Apr 2023',
-    highlight: '27% hardness improvement (548 → 699 HV) across 24 powder-metallurgy formulations',
+    highlight: '24.49% hardness improvement (698.66 HV peak) across 24 powder-metallurgy formulations',
     accent: 'green',
     metrics: [
-      { val: '+27%', lbl: 'Hardness Improvement' },
-      { val: '699 HV', lbl: 'Peak Hardness' },
+      { val: '+24.49%', lbl: 'Hardness Improvement' },
+      { val: '698.66 HV', lbl: 'Peak Hardness' },
       { val: '24', lbl: 'Formulations Tested' },
       { val: '850°C', lbl: 'Sintering Temperature' },
     ],
@@ -137,7 +137,7 @@ const DETAIL_PAGES = {
     sections: [
       {
         title: 'What Was Built',
-        body: 'Developed borosilicate-alumina-copper oxide glass-ceramic composites to address vial breakage in pharmaceutical packaging. As Project Lead, designed, fabricated, and characterized 24 composite formulations using powder metallurgy techniques - achieving up to 27% hardness improvement (548 → 699 HV) while maintaining commercial viability. The work resulted in a 52-page technical thesis and a departmental research symposium presentation.',
+        body: 'Developed borosilicate-alumina-copper oxide glass-ceramic composites to address vial breakage in pharmaceutical packaging. As Project Lead, designed, fabricated, and characterized 24 composite formulations using powder metallurgy techniques - achieving a 24.49% hardness improvement (698.66 HV peak) over pure borosilicate while maintaining commercial viability. Results were published in the Journal of The Institution of Engineers (India): Series D (2024) — DOI: 10.1007/s40033-024-00846-x.',
       },
       {
         title: 'How It Was Built',
@@ -172,7 +172,7 @@ const DETAIL_PAGES = {
     type: 'lab',
     tag: 'Competition',
     title: 'SAE Aero Design Challenge',
-    meta: 'CFD Analysis Specialist & Manufacturing Planner · Team Ethereal Predators · Aug 2021–Mar 2022',
+    meta: 'Team Lead · GHOST SQUADRONS · Mar 2022 – Oct 2022',
     highlight: '85% CFD-to-theory correlation · 92" tapered wingspan · SELIG 1223 selected',
     accent: 'green',
     metrics: [
@@ -232,7 +232,7 @@ const DETAIL_PAGES = {
     images: [],
     links: {
       demo: 'https://fmea-risk-analyzer-mhwzcki9sdzfz5d8rbzsdn.streamlit.app/',
-      github: 'https://github.com/Siddardth7/fmea-risk-analyzer',
+      github: 'https://github.com/siddardth7/fmea-risk-analyzer',
     },
     sections: [
       {
@@ -252,7 +252,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Tech Stack',
-        body: 'Python 3.10+ · Streamlit 1.56 · Plotly 6.6 for interactive charts · Pandas for data processing · ReportLab for PDF generation · openpyxl for Excel export. 78 unit tests running on GitHub Actions CI. Engineering reference: AIAG FMEA-4 (4th Ed, 2008) and AIAG/VDA FMEA Handbook (5th Ed, 2019).',
+        body: 'Python 3.10+ · Streamlit 1.56 · Plotly 6.6 for interactive charts · Pandas for data processing · ReportLab for PDF generation · openpyxl for Excel export. 61 unit tests running on GitHub Actions CI. Engineering reference: AIAG FMEA-4 (4th Ed, 2008).',
       },
       {
         title: 'Demo Dataset',
@@ -278,7 +278,7 @@ const DETAIL_PAGES = {
     images: [],
     links: {
       demo: 'https://manufacturing-spc-dashboard-k8hyyj2fylnvjfrpcgqhyr.streamlit.app',
-      github: 'https://github.com/Siddardth7/manufacturing-spc-dashboard',
+      github: 'https://github.com/siddardth7/manufacturing-spc-dashboard',
     },
     sections: [
       {
@@ -321,7 +321,7 @@ const DETAIL_PAGES = {
     heroImage: { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison - <1% error' },
     images: [],
     links: {
-      github: 'https://github.com/Siddardth7/Virtual-Composite-Design-Optimization',
+      github: 'https://github.com/siddardth7/Virtual-Composite-Design-Optimization',
     },
     sections: [
       {
@@ -359,15 +359,15 @@ const DETAIL_PAGES = {
   'exp-tata': {
     type: 'experience',
     tag: 'Industry',
-    title: 'Quality Assurance & MRB Coordinator',
-    meta: 'Tata Boeing Aerospace · QC Inspector to MRB Coordinator · Oct 2022 - Mar 2023 · Hyderabad, India',
-    highlight: '450+ flight-critical components inspected for CFM LEAP engine programs powering Boeing 737 MAX and Airbus A320neo',
+    title: 'Quality Assurance & MRB Intern',
+    meta: 'Tata Advanced Systems Limited · QA & MRB Intern · Oct 2022 - Mar 2023 · Hyderabad, India',
+    highlight: '450+ flight-critical components inspected for GE Aerospace LEAP engine programs',
     accent: 'blue',
     metrics: [
       { val: '450+', lbl: 'Parts Inspected' },
       { val: '22%', lbl: 'Cycle Time ↓' },
       { val: '15→3%', lbl: 'Defect Rate' },
-      { val: '₹2.5L', lbl: 'Scrap Recovered' },
+      { val: '$3,000', lbl: 'Scrap Avoided' },
     ],
     images: [],
     sections: [
@@ -375,7 +375,7 @@ const DETAIL_PAGES = {
         title: 'Role Progression',
         steps: [
           'QC Inspector (Months 1–3): Dimensional inspection using CMM (0.02mm accuracy), surface roughness testing, and GD&T interpretation. Achieved 100% report accuracy with zero customer escapes on GE/Boeing programs.',
-          'MRB Coordinator (Months 4–6): Promoted to lead cross-functional Material Review Board meetings - coordinating disposition decisions between quality, engineering, and production for nonconforming parts.',
+          'MRB Coordination (Months 4–6): Coordinated cross-functional Material Review Board activities and managed disposition meetings in interim when the MRB lead was away — collaborating with the Quality Manager and engineering/production teams on nonconforming parts.',
         ],
       },
       {
@@ -384,7 +384,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Supplier FMEA & Scrap Recovery',
-        body: 'Led FMEA investigation when a supplier delivered aluminum alloy below specification - affecting 200+ parts. Negotiated use-as-is MRB disposition with engineering, backed by stress analysis confirming adequate margin for the non-critical bracket application. Recovered ₹2.5L in scrap value and maintained production schedule without delay.',
+        body: 'Led FMEA investigation when a supplier delivered material below specification. Built the FMEA-based justification for engineering-approved use-as-is MRB disposition, backed by stress analysis confirming adequate margin. Avoided ~$3,000 in scrap value and prevented a 4-week supply delay.',
       },
       {
         title: 'Process Optimization',
@@ -392,7 +392,7 @@ const DETAIL_PAGES = {
       },
       {
         title: 'Working with Aerospace Standards',
-        body: 'The components inspected were flight hardware for the CFM International LEAP engine - the fastest-selling engine in commercial aviation history, powering Boeing 737 MAX and Airbus A320neo family aircraft. With 14,000+ engine orders and production ramping to 2,000 engines per year, zero quality escapes was not a slogan - it was a production requirement. Working under AS9100 and Boeing supplier quality requirements gave real-world grounding to Six Sigma methodology that no classroom can replicate.',
+        body: 'The components inspected were flight hardware for the CFM International LEAP engine — one of the highest-volume commercial aviation engine programs. Zero quality escapes was not a slogan — it was a production requirement. Working under AS9100 and aerospace supplier quality requirements gave real-world grounding to Six Sigma methodology that no classroom can replicate.',
       },
     ],
     skills: ['CMM Operation', 'GD&T (ASME Y14.5)', '8D Problem Solving', 'pFMEA', 'Statistical Process Control', 'Root Cause Analysis', 'AS9100 / ISO 9001', 'MRB Coordination'],
@@ -402,12 +402,12 @@ const DETAIL_PAGES = {
     type: 'experience',
     tag: 'Research',
     title: 'Graduate Research Assistant',
-    meta: 'Beckman Institute, UIUC · Autonomous Materials Systems Lab · May 2024 - Dec 2024 · Urbana, IL',
+    meta: 'Beckman Institute, UIUC · Autonomous Materials Systems Lab · Aug 2024 - Dec 2024 · Urbana, IL',
     highlight: 'Out-of-autoclave cure via frontal polymerization: 8+ hour cycle reduced to under 5 minutes',
     accent: 'blue',
     metrics: [
       { val: '8h → 5m', lbl: 'Cure Cycle' },
-      { val: '94%', lbl: 'Faster Optimization' },
+      { val: '40%', lbl: 'Oscillation ↓' },
       { val: '10%', lbl: 'Velocity Accuracy' },
       { val: '3°C', lbl: 'Temp. Error' },
     ],
@@ -423,7 +423,7 @@ const DETAIL_PAGES = {
           '01 - Developed level-set and reaction-diffusion models using the MOOSE finite element framework',
           '02 - Implemented Adaptive Mesh Refinement concentrating elements at the moving reaction front',
           '03 - Predicted front velocity within 10% accuracy and peak temperatures within 3°C of experimental results',
-          '04 - Accelerated process parameter optimization by 94% compared to full reaction-diffusion simulation',
+          '04 - Reduced curvature-induced oscillations by 40% via Olson heavy-set smoothing; enabled 2× mesh coarsening without accuracy loss',
         ],
       },
       {
@@ -529,14 +529,14 @@ function DetailModal({ id, onClose }) {
               {'links' in page && (
                 <div className="dp-header__links">
                   {page.links.demo && (
-                    <a href={page.links.demo} target="_blank" rel="noreferrer" className="btn btn--amber btn--sm">
+                    <a href={page.links.demo} target="_blank" rel="noopener noreferrer" className="btn btn--amber btn--sm">
                       <span className="btn__pulse" aria-hidden="true"></span>
                       Live Demo
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M4 7l3-3M7 4H4.5M7 4v2.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/></svg>
                     </a>
                   )}
                   {page.links.github && (
-                    <a href={page.links.github} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+                    <a href={page.links.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost btn--sm">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0a6 6 0 0 0-1.9 11.7c.3.05.4-.13.4-.29v-1c-1.66.36-2-.8-2-.8-.27-.69-.66-.87-.66-.87-.55-.37.04-.36.04-.36.6.04.92.62.92.62.54.92 1.4.65 1.74.5.05-.39.21-.65.38-.8-1.32-.15-2.71-.66-2.71-2.94 0-.65.23-1.18.62-1.6-.06-.15-.27-.76.06-1.59 0 0 .5-.16 1.65.61a5.7 5.7 0 0 1 3 0c1.14-.77 1.65-.61 1.65-.61.33.83.12 1.44.06 1.59.38.42.62.95.62 1.6 0 2.29-1.4 2.79-2.72 2.94.21.18.4.54.4 1.09v1.62c0 .16.1.34.4.28A6 6 0 0 0 6 0Z"/></svg>
                       GitHub
                     </a>
