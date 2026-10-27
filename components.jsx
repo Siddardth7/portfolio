@@ -277,7 +277,7 @@ function Hero() {
             </div>
 
             <p className="cs__footer-tagline mono">
-              Tata Advanced Systems Limited · UIUC · Beckman Institute · 140+ Unit Tests
+              Tata Advanced Systems Limited · UIUC · Beckman Institute · Quality Platform
             </p>
 
           </div>
@@ -847,30 +847,37 @@ function Schematic({ kind, index }) {
 // ─────────────────────────────────────────────────────────
 const CODE_TOOLS = [
   {
-    n: '01', name: 'FMEA Risk Analyzer', detailId: 'code-fmea',
-    purpose: 'Automates AIAG FMEA-4 risk priority calculation and Pareto analysis from imported failure-mode data.',
-    stack: ['Python', 'Streamlit', 'Plotly', 'AIAG FMEA-4'],
-    metric: '61', metricLbl: 'unit tests',
-    hasDemo: true, viz: 'pareto',
-    demoUrl: 'https://fmea-risk-analyzer-mhwzcki9sdzfz5d8rbzsdn.streamlit.app/',
-    githubUrl: 'https://github.com/siddardth7/fmea-risk-analyzer',
+    n: '01', name: 'Quality Platform', detailId: 'code-platform',
+    purpose: 'FMEA, SPC, Control Plan and MSA engines on one tested core, connected into a closed loop and run on real semiconductor data.',
+    stack: ['Python', 'MCP', 'Streamlit', 'AIAG'],
+    metric: '2,502', metricLbl: 'tests passing',
+    hasDemo: true, viz: 'loop',
+    demoUrl: 'https://quality-platform-nplyhc6rvsd3bfw6q9vvkd.streamlit.app/',
+    githubUrl: 'https://github.com/Siddardth7/quality-platform',
   },
   {
-    n: '02', name: 'SPC Manufacturing Dashboard', detailId: 'code-spc',
-    purpose: 'Live X̄-R, X̄-S, p, np, and c charts with rolling Cp/Cpk capability indices for production lots.',
-    stack: ['Python', 'Streamlit', '5 chart types', 'Cp/Cpk'],
-    metric: '83', metricLbl: 'unit tests',
-    hasDemo: true, viz: 'spc',
-    demoUrl: 'https://manufacturing-spc-dashboard-k8hyyj2fylnvjfrpcgqhyr.streamlit.app',
-    githubUrl: 'https://github.com/siddardth7/manufacturing-spc-dashboard',
+    n: '02', name: 'Quality Engineering Skills', detailId: 'code-qes',
+    purpose: 'AI agent skills for quality engineering, where a tested engine, not the model, does the math.',
+    stack: ['Python', 'MCP', 'Agent Skills', '100% coverage'],
+    metric: '9', metricLbl: 'quality domains',
+    hasDemo: false, viz: 'qes',
+    githubUrl: 'https://github.com/Siddardth7/quality-engineering-skills',
   },
   {
-    n: '03', name: 'Virtual Composite Design Toolkit', detailId: 'code-composite',
-    purpose: 'Classical Lamination Theory layup optimizer cross-validated against CalculiX FEA via simulated annealing.',
-    stack: ['Python', 'CLT', 'CalculiX FEA', 'Simulated Annealing'],
-    metric: '<1%', metricLbl: 'FEA error',
-    hasDemo: false, viz: 'layup',
-    githubUrl: 'https://github.com/siddardth7/Virtual-Composite-Design-Optimization',
+    n: '03', name: 'Sentinel-8D', detailId: 'code-sentinel',
+    purpose: 'Traced assembly rework back through saw, mill and lathe data to an upstream station, written up as an AIAG 8D.',
+    stack: ['pandas', 'statsmodels', 'scikit-learn', '8D'],
+    metric: '802', metricLbl: 'parts traced',
+    hasDemo: false, viz: 'spc',
+    githubUrl: 'https://github.com/Siddardth7/sentinel-8d',
+  },
+  {
+    n: '04', name: 'Nexus-FMEA', detailId: 'code-nexus',
+    purpose: 'PFMEA with Occurrence from measured defect rates, and a script that proves every high risk has a control.',
+    stack: ['Python', 'openpyxl', 'AIAG-VDA', 'Wilson CI'],
+    metric: '0', metricLbl: 'orphan risks',
+    hasDemo: false, viz: 'pareto',
+    githubUrl: 'https://github.com/Siddardth7/nexus-fmea',
   },
 ];
 
@@ -879,11 +886,11 @@ function CodeSection() {
     <section id="code" className="section section--code">
       <div className="container">
         <SectionHeader
-          kicker="02 / SOFTWARE · DEPLOYED"
+          kicker="02 / SOFTWARE · QUALITY ENGINEERING"
           title={<>Built Projects in Code<span className="title-cursor title-cursor--amber" aria-hidden="true"></span></>}
-          subtitle={<>Production-grade tools for quality and composites engineering. Each runs live - built in Python, deployed on Streamlit, with <strong style={{color:'var(--amber-1)'}}>140+ unit tests</strong> across all three.</>}
+          subtitle={<>A connected AIAG core-tools platform, an agent-skills layer built on it, and two case studies on real manufacturing data. All in Python, built with AI coding assistance and <strong style={{color:'var(--amber-1)'}}>tested in CI</strong>.</>}
           accent="amber"
-          count="03 TOOLS"
+          count="04 PROJECTS"
         />
         <div className="code-grid">
           {CODE_TOOLS.map((t, i) => <CodeCard key={t.n} {...t} delay={i * 80} />)}
@@ -915,7 +922,8 @@ function CodeCard({ n, name, purpose, stack, metric, metricLbl, hasDemo, viz, de
       <div className="code-card__viz">
         {viz === 'pareto' && <ParetoViz hover={hover} />}
         {viz === 'spc' && <SPCViz hover={hover} />}
-        {viz === 'layup' && <LayupViz hover={hover} />}
+        {viz === 'loop' && <LoopViz hover={hover} />}
+        {viz === 'qes' && <QesViz hover={hover} />}
       </div>
 
       <div className="code-card__body">
@@ -960,7 +968,7 @@ function CodeCard({ n, name, purpose, stack, metric, metricLbl, hasDemo, viz, de
 }
 
 function ParetoViz({ hover }) {
-  const bars = [78, 64, 51, 38, 24, 12];
+  const bars = [22.3, 12.9, 8.4, 2.4, 2.4, 2.0].map(r => r * 3.4);
   return (
     <svg viewBox="0 0 280 120" className="viz">
       <line x1="20" y1="100" x2="270" y2="100" stroke="rgba(255,255,255,0.18)" strokeWidth="1"/>
@@ -981,7 +989,7 @@ function ParetoViz({ hover }) {
         const cum = bars.slice(0, i+1).reduce((s,v)=>s+v,0) / bars.reduce((s,v)=>s+v,0);
         return <circle key={i} cx={44 + i*40} cy={100 - cum*78} r="2.5" fill="#fbbf24"/>;
       })}
-      <text x="20" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">RPN · pareto</text>
+      <text x="20" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">defect rate · per characteristic</text>
     </svg>
   );
 }
@@ -1016,35 +1024,44 @@ function SPCViz({ hover }) {
       {points.map((y, i) => (
         <circle key={i} cx={15 + i * 14} cy={y} r="2" fill="#fbbf24"/>
       ))}
-      <text x="10" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">x̄-R · live</text>
-      <text x="220" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(245,158,11,0.7)">Cpk 1.41</text>
+      <text x="10" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">I-MR · saw blank weight</text>
     </svg>
   );
 }
 
-function LayupViz({ hover }) {
-  const angles = [0, 45, -45, 90, 90, -45, 45, 0];
+function LoopViz({ hover }) {
+  const boxes = [['FMEA', 20], ['CONTROL PLAN', 100], ['SPC', 200]];
+  const c = hover ? '#fbbf24' : '#f59e0b';
   return (
     <svg viewBox="0 0 280 120" className="viz">
-      <text x="10" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">[0/±45/90]s · CLT</text>
-      {angles.map((a, i) => {
-        const y = 30 + i * 9;
-        return (
-          <g key={i} transform={`translate(20, ${y})`}>
-            <rect x="0" y="0" width="240" height="6" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.3)" strokeWidth="0.5"/>
-            {/* fiber direction lines */}
-            <g style={{ transformOrigin: '120px 3px' }}>
-              {Array.from({length: 12}).map((_, j) => {
-                const x = 12 + j * 20;
-                const dx = Math.cos(a * Math.PI / 180) * 14;
-                const dy = Math.sin(a * Math.PI / 180) * 3;
-                return <line key={j} x1={x - dx/2} y1={3 - dy/2} x2={x + dx/2} y2={3 + dy/2} stroke={hover ? '#fbbf24' : 'rgba(245,158,11,0.7)'} strokeWidth="0.8"/>;
-              })}
-            </g>
-            <text x="248" y="5" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(255,255,255,0.5)">{a >= 0 ? '+' : ''}{a}°</text>
-          </g>
-        );
-      })}
+      <text x="10" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">AIAG core-tools loop</text>
+      {boxes.map(([label, x]) => (
+        <g key={label}>
+          <rect x={x} y="42" width={label === 'CONTROL PLAN' ? 80 : 60} height="26" rx="3" fill="rgba(245,158,11,0.08)" stroke={c} strokeWidth="1"/>
+          <text x={x + (label === 'CONTROL PLAN' ? 40 : 30)} y="58" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="8" fill={c}>{label}</text>
+        </g>
+      ))}
+      <path d="M80 55 H98 M180 55 H198" stroke={c} strokeWidth="1"/>
+      <path d="M230 68 V92 H50 V70" fill="none" stroke={c} strokeWidth="1" strokeDasharray="3 3"/>
+      <text x="140" y="104" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(255,255,255,0.45)">SPC evidence proposes Occurrence · human reviews</text>
+      <text x="230" y="30" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(255,255,255,0.45)">MSA gates the gauge</text>
+    </svg>
+  );
+}
+
+function QesViz({ hover }) {
+  const lines = [
+    ['> agent: score S=8 O=5 D=6', 'rgba(255,255,255,0.55)'],
+    ['  calls fmea_score(8, 5, 6)', 'rgba(255,255,255,0.4)'],
+    ['  { rpn: 240, action_priority: "Medium" }', hover ? '#fbbf24' : '#f59e0b'],
+    ['> math from tested code, not the model', 'rgba(255,255,255,0.55)'],
+  ];
+  return (
+    <svg viewBox="0 0 280 120" className="viz">
+      <text x="10" y="14" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(255,255,255,0.4)">MCP tool call</text>
+      {lines.map(([t, fill], i) => (
+        <text key={i} x="12" y={40 + i * 18} fontFamily="JetBrains Mono" fontSize="8.5" fill={fill}>{t}</text>
+      ))}
     </svg>
   );
 }

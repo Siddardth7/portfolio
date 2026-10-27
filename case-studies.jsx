@@ -215,142 +215,211 @@ const DETAIL_PAGES = {
 
   // ── SOFTWARE TOOLS ────────────────────────────────────
 
-  'code-fmea': {
+  'code-platform': {
     type: 'code',
-    tag: 'Python · Streamlit',
-    title: 'FMEA Risk Analyzer',
-    meta: 'Quality Engineering Tool · 78 Unit Tests · Live on Streamlit Cloud',
-    highlight: 'Automates pFMEA risk analysis with AIAG FMEA-4 compliance, Pareto ranking, and PDF/Excel export',
+    tag: 'Python · MCP · Streamlit',
+    title: 'Quality Platform',
+    meta: 'AIAG core tools in one monorepo · FMEA, SPC, Control Plan, MSA · 2026',
+    highlight: 'FMEA, SPC, Control Plan and MSA engines on one shared, tested core, usable in a browser or by an AI agent, and run end to end on real semiconductor data (SECOM)',
     accent: 'amber',
     metrics: [
-      { val: '78', lbl: 'Unit Tests' },
-      { val: 'AIAG', lbl: 'FMEA-4 Compliant' },
-      { val: '80/20', lbl: 'Pareto Ranking' },
-      { val: 'PDF+XLS', lbl: 'Export Formats' },
+      { val: '2,502', lbl: 'Tests Passing' },
+      { val: '49', lbl: 'MCP Tools' },
+      { val: '4', lbl: 'Core Tools' },
+      { val: 'SECOM', lbl: 'Real Fab Data' },
     ],
     images: [],
     links: {
-      demo: 'https://fmea-risk-analyzer-mhwzcki9sdzfz5d8rbzsdn.streamlit.app/',
-      github: 'https://github.com/siddardth7/fmea-risk-analyzer',
+      demo: 'https://quality-platform-nplyhc6rvsd3bfw6q9vvkd.streamlit.app/',
+      github: 'https://github.com/Siddardth7/quality-platform',
+    },
+    heroImage: { src: 'images/platform/platform-home.png', caption: 'One shell, every tool: FMEA, SPC, Control Plan and MSA under one URL' },
+    sections: [
+      {
+        title: 'The Problem It Solves',
+        body: "In most quality departments the AIAG core tools live in separate spreadsheets and one-off apps. A failure mode found in the FMEA never becomes a control on the Control Plan, and an out-of-control point on an SPC chart never makes it back to the FMEA's risk rating. The method describes a closed loop; the tooling almost never builds one. This platform builds it.",
+      },
+      {
+        title: 'The Loop',
+        steps: [
+          '01 - FMEA scores each failure mode with RPN and AIAG-VDA Action Priority',
+          '02 - High-priority failure modes become Control Plan rows: characteristic, spec, method, sample plan, recommended chart',
+          '03 - The Control Plan configures the SPC chart',
+          '04 - SPC evidence proposes an updated Occurrence rating for a person to review; it never overwrites one',
+          '05 - MSA / Gage R&R checks the gauge before the chart is trusted',
+        ],
+        gallery: [
+          { src: 'images/platform/fmea-risk-dashboard.png', caption: 'FMEA Risk Analyzer: Action Priority and risk tiers' },
+          { src: 'images/platform/spc-control-chart.png', caption: 'SPC: Xbar-R chart with Western Electric rule overlays' },
+        ],
+      },
+      {
+        title: 'Real Semiconductor Data',
+        body: "The SECOM case study runs the platform on real semiconductor process sensor data: control charts, yield and DPPM, and a Pareto of failing signals. It deliberately refuses Cp/Cpk (the dataset has no tolerances) and Gage R&R (it has no part, appraiser or trial structure) rather than inventing them.",
+        image: { src: 'images/platform/capability-gauge.png', caption: 'Capability with a stability gate: no Cpk claim on an out-of-control process' },
+      },
+      {
+        title: 'Built Like Production Software',
+        body: "A uv workspace monorepo with one typed shared core (quality_core) used by every app and by the MCP server, so the UI and the agent tools cannot drift apart. Strict typing, lint and 100% coverage gates on the shared core run in CI on every push. The earlier FMEA Risk Analyzer and SPC Dashboard were merged in with their full commit history. Every AIAG constant is cited in an assumptions log.",
+      },
+      {
+        title: 'What It Is Not',
+        body: "On-demand analysis over files you supply. It is not real-time monitoring, not a data historian or EQMS, and not a replacement for engineering judgment: the tools compute, cite and refuse; the engineer decides. " + "Built with AI coding assistance (Claude Code). I set the scope, chose the methods and standards, checked the outputs and wrote the conclusions.",
+      },
+    ],
+    skills: ['FMEA (AIAG-VDA)', 'SPC (AIAG 4th Ed.)', 'Control Plans', 'MSA / Gage R&R', 'Python', 'MCP Server', 'Streamlit', 'pytest / CI'],
+  },
+
+  'code-qes': {
+    type: 'code',
+    tag: 'Python · MCP · Agent Skills',
+    title: 'Quality Engineering Skills',
+    meta: 'AI agent skills backed by tested calculation engines · sister project to Quality Platform · 2026',
+    highlight: 'The AI reasons about the method; a tested Python engine does the math, so Cp/Cpk, Gage R&R and Action Priority are never guessed',
+    accent: 'amber',
+    metrics: [
+      { val: '9', lbl: 'Quality Domains' },
+      { val: '100%', lbl: 'Branch Coverage (Core)' },
+      { val: '11', lbl: 'Milestones Built' },
+      { val: 'Local', lbl: 'No Cloud Backend' },
+    ],
+    images: [],
+    links: {
+      github: 'https://github.com/Siddardth7/quality-engineering-skills',
     },
     sections: [
       {
         title: 'The Problem It Solves',
-        body: 'Process FMEA risk analysis is mandatory in aerospace (AS9100) and automotive (IATF 16949) manufacturing. In practice, engineers manage pFMEA tables in sprawling Excel spreadsheets - RPN scores calculated manually, Pareto ranking done by hand, and AIAG criticality flags routinely missed. This tool replaces that entire workflow with a live, interactive Streamlit application.',
+        body: "AI assistants explain quality methods well, but asked to compute in their head they get the arithmetic wrong: control limits, Cp/Cpk, Action Priority. This project splits the work so the model never does the math.",
       },
       {
         title: 'How It Works',
         steps: [
-          '01 - Upload pFMEA data as CSV/Excel, or click "Use Demo Dataset" (30-row composite panel FMEA)',
-          '02 - Engine computes RPN = Severity × Occurrence × Detection for all failure modes',
-          '03 - AIAG FMEA-4 criticality flags applied: Severity ≥ 9 auto-flagged regardless of total RPN',
-          '04 - Interactive Pareto chart identifies the 20% of failure modes driving 80% of total risk',
-          '05 - Heatmap visualization maps Severity vs Detection across the full risk matrix',
-          '06 - Export publication-ready PDF report or ranked Excel file with one click',
+          '01 - Agent Skills (markdown) guide the reasoning: structuring an FMEA, a reversible 5-Why chain, a nonconformance write-up',
+          '02 - Deterministic engines in quality-core do every calculation',
+          '03 - An MCP server exposes those engines to Claude Code, Cursor and Codex as tools the agent calls',
+          '04 - A minimal local canvas renders the charts and grids; it works on local CSV, Excel and JSON files',
         ],
       },
       {
-        title: 'Tech Stack',
-        body: 'Python 3.10+ · Streamlit 1.56 · Plotly 6.6 for interactive charts · Pandas for data processing · ReportLab for PDF generation · openpyxl for Excel export. 61 unit tests running on GitHub Actions CI. Engineering reference: AIAG FMEA-4 (4th Ed, 2008).',
-      },
-      {
-        title: 'Demo Dataset',
-        body: 'The 30-row demo dataset is a realistic composite panel pFMEA with autoclave cure temperature deviation, vacuum bag leak, ply misalignment, and 27 other failure modes. The top 6 modes (of 30) account for approximately 29% of total RPN - the Pareto chart makes this immediately visible, showing exactly where corrective action spending should be concentrated.',
-      },
-    ],
-    skills: ['Python', 'Streamlit', 'Plotly', 'Pandas', 'pFMEA', 'AIAG FMEA-4', 'RPN Calculation', 'Pareto Analysis', 'ReportLab PDF', 'GitHub Actions CI'],
-  },
-
-  'code-spc': {
-    type: 'code',
-    tag: 'Python · Streamlit',
-    title: 'SPC Manufacturing Dashboard',
-    meta: 'Process Control Tool · 83 Unit Tests · Live on Streamlit Cloud',
-    highlight: 'Full-featured SPC with 5 chart types, Western Electric + Nelson rule detection, and Cp/Cpk capability',
-    accent: 'amber',
-    metrics: [
-      { val: '83', lbl: 'Unit Tests' },
-      { val: '5', lbl: 'Chart Types' },
-      { val: 'Cp/Cpk', lbl: 'Capability Indices' },
-      { val: 'Live', lbl: 'Disturbance Simulator' },
-    ],
-    images: [],
-    links: {
-      demo: 'https://manufacturing-spc-dashboard-k8hyyj2fylnvjfrpcgqhyr.streamlit.app',
-      github: 'https://github.com/siddardth7/manufacturing-spc-dashboard',
-    },
-    sections: [
-      {
-        title: 'The Problem It Solves',
-        body: 'SPC charts are the industry standard for separating common-cause from special-cause variation. Most production environments either track SPC in Excel (no automated rule detection) or pay for expensive MES software. This dashboard provides full-featured SPC analysis - five chart types, both Western Electric and Nelson rule detection, plus Cp/Cpk/Pp/Ppk - free and open-source.',
-      },
-      {
-        title: 'Three Application Pages',
+        title: 'What It Covers',
         steps: [
-          'Control Charts - X̄-R, X̄-S, I-MR, p-chart, and u-chart for five aerospace process streams with rule violation markers',
-          'Process Capability - Cp, Cpk, Pp, Ppk with distribution histogram and Shapiro-Wilk normality test',
-          'Live Simulation - real-time subgroup generation with injected mean-shift and variance-increase disturbances',
+          'FMEA and Action Priority · SPC · MSA / Gage R&R · Control Plan (engines reused from Quality Platform)',
+          'Root-cause suite: 5-Why, fishbone, Is/Is-Not',
+          'Nonconformance (NCR) and cost of poor quality',
+          'PPAP: the 18-element base standard',
+          'Supplier corrective action (SCAR) and vendor rating',
+          '8D problem-solving as a state machine',
         ],
       },
       {
-        title: 'Tech Stack',
-        body: 'Python 3.11+ · Streamlit 1.50+ · Plotly for interactive charts · Pandas + NumPy for SPC math · SciPy for Shapiro-Wilk normality test. 83 unit tests covering every control limit formula, every rule detection case (Western Electric 8 rules + Nelson 10 rules), and every capability index calculation. Deterministic 370-row demo dataset committed to the repo (seed=42).',
-      },
-      {
-        title: 'Why 83 Tests?',
-        body: 'SPC math has well-defined correct answers. A test suite that covers every control limit formula and every rule detection case guarantees the charts are numerically correct. Western Electric Rule 2 (2 of 3 beyond 2σ) and Nelson Rule 7 (15 in a row within 1σ) are the trickiest to implement correctly - both have explicit test cases. The test suite runs on every GitHub push via Actions CI.',
+        title: 'Standards & Testing',
+        body: "Every AIAG, ISO and VDA constant is cited in that domain's assumptions log. Strict typing, lint, a dependency audit and 100% line-and-branch coverage gates run in CI, and the core may not depend on any UI code. " + "Built with AI coding assistance (Claude Code). I set the scope, chose the methods and standards, checked the outputs and wrote the conclusions.",
       },
     ],
-    skills: ['Python', 'Streamlit', 'Plotly', 'SPC', 'X̄-R Control Charts', 'Cp/Cpk Capability', 'Western Electric Rules', 'Nelson Rules', 'Pandas', 'NumPy', 'SciPy'],
+    skills: ['FMEA', 'SPC', 'MSA', 'Control Plan', '8D / RCA', 'PPAP', 'Python', 'MCP', 'Agent Skills'],
   },
 
-  'code-composite': {
+  'code-sentinel': {
     type: 'code',
-    tag: 'Python · CLT · FEA',
-    title: 'Virtual Composite Design Toolkit',
-    meta: 'Composites Analysis Engine · CLT + Simulated Annealing + CalculiX FEA Validation',
-    highlight: '<1% deflection error vs CalculiX FEA · stacking sequence optimizer for the SAMPE competition build',
+    tag: 'Case Study · Python',
+    title: 'Sentinel-8D: Root-Cause Traceback',
+    meta: 'Statistical root cause and an AIAG 8D on public manufacturing data (CiP-DMD, TU Darmstadt) · Aug 2026',
+    highlight: 'Traced 52 assembly rework failures across 802 cylinders back to an upstream station: lighter saw blanks, still in spec, were about twice as likely to need rework',
     accent: 'amber',
     metrics: [
-      { val: '<1%', lbl: 'Deflection Error vs FEA' },
-      { val: '<3%', lbl: 'Stress Error (IM7/8552)' },
-      { val: 'SA', lbl: 'Stacking Optimizer' },
-      { val: 'ABD', lbl: 'Full Matrix Output' },
+      { val: '802', lbl: 'Parts Traced' },
+      { val: '6.48%', lbl: 'Rework Rate' },
+      { val: 'OR 0.50', lbl: 'Per 1 SD Heavier' },
+      { val: '3 of 3', lbl: 'Models Agree' },
     ],
-    heroImage: { src: 'images/composite/fea-comparison.png', caption: 'CLT vs CalculiX FEA deflection comparison - <1% error' },
     images: [],
     links: {
-      github: 'https://github.com/siddardth7/Virtual-Composite-Design-Optimization',
+      github: 'https://github.com/Siddardth7/sentinel-8d',
     },
+    heroImage: { src: 'images/sentinel/weight-vs-failure.png', caption: 'Failing parts skew lighter at the saw (left); rework rate by blank-weight band (right)' },
     sections: [
       {
-        title: 'What It Does',
-        body: 'A complete engineering toolkit for analyzing, validating, and optimizing composite laminate structures - built from first principles for the SAMPE Fuselage Competition, then extended into a fully validated open-source composites library. Computes full [A],[B],[D] stiffness matrices, recovers ply-level stresses and strains, evaluates failure indices via Tsai-Wu and Hashin criteria, predicts plate deflection via Navier series, and optimizes stacking sequences using Simulated Annealing.',
-        image: { src: 'images/composite/laminate-stack.png', caption: 'ABD matrix stiffness by ply angle - [0/±45/90]s' },
+        title: 'The Question',
+        body: "A defect found at final assembly is rarely created at the last step. The dataset follows small pneumatic cylinders through a saw, a CNC mill and a CNC lathe to assembly, and every part is traceable. 52 of 802 needed rework. Which upstream station and measurement drives that?",
       },
       {
-        title: 'Validation Results',
+        title: 'What I Did',
         steps: [
-          'CLT vs CalculiX FEA deflection: <1% error on IM7/8552 simply-supported plate (3 configurations verified)',
-          'CLT vs FEA max principal stress: <3% error at plate center and free edges',
-          'Simulated Annealing optimizer finds [0/±45/90]s optimum in <10 min - matches analytical result',
-          'Angle sweep Ex vs θ: curves match CFRP handbook published data for all standard material systems',
+          "01 - Joined every station's data into one row per assembled part using the traceability IDs",
+          '02 - Screened every measurement with Welch t-tests and chi-square, corrected for multiple testing (Benjamini-Hochberg)',
+          '03 - Checked the shortlist for overlap (VIF 1.02 to 1.09), then fitted a multivariate logistic regression',
+          '04 - Cross-checked with random forest and gradient boosting: all three ranked saw blank weight first',
+          '05 - Wrote it up as an AIAG 8D, with an I-MR chart on blank weight as the proposed control at the source',
+        ],
+      },
+      {
+        title: 'The Finding',
+        body: "Each standard deviation lighter (about 24.5 g) roughly doubles the odds of rework (odds ratio 0.503 per SD heavier, 95% CI 0.371 to 0.683). Blanks under 0.540 kg needed rework 15.6% of the time, against 4.9% above it. Every blank was still inside the saw spec, which suggests the spec is wider than the next step can tolerate.",
+        image: { src: 'images/sentinel/imr-chart.png', caption: 'Blank weight in production order: the failures cluster in a few windows' },
+      },
+      {
+        title: 'What the Data Does Not Prove',
+        body: "This is an association, not a proven cause. The failures cluster in a few production windows, so batch, material or setup could be the real driver, and the parts the researchers deliberately sawed misaligned did not fail. The 8D's team, sign-offs and verification are illustrative, and the '36.5% of rework prevented' figure is a projection. On a real line the next step is a controlled trial before adding the check.",
+      },
+      {
+        title: 'How It Was Built',
+        body: "Python (pandas, SciPy, statsmodels, scikit-learn), Jupyter and Git, on a public CC-BY-4.0 dataset. " + "Built with AI coding assistance (Claude Code). I set the scope, chose the methods and standards, checked the outputs and wrote the conclusions.",
+      },
+    ],
+    skills: ['Root Cause Analysis', 'AIAG 8D', 'Logistic Regression', 'Welch t-test / FDR', 'Random Forest', 'I-MR SPC', 'pandas / statsmodels', 'Traceability'],
+  },
+
+  'code-nexus': {
+    type: 'code',
+    tag: 'Case Study · Python',
+    title: 'Nexus-FMEA: Data-Driven PFMEA',
+    meta: 'AIAG-VDA PFMEA and Control Plan on the same 802-part dataset · Aug 2026',
+    highlight: 'Occurrence ratings set from measured defect rates instead of meeting guesses, and a script that proves every high risk has a control',
+    accent: 'amber',
+    metrics: [
+      { val: '9', lbl: 'Characteristics' },
+      { val: '5', lbl: 'High-Priority Risks' },
+      { val: '0', lbl: 'Orphan Risks' },
+      { val: '95%', lbl: 'Wilson CIs' },
+    ],
+    images: [],
+    links: {
+      github: 'https://github.com/Siddardth7/nexus-fmea',
+    },
+    heroImage: { src: 'images/nexus/defect-rates.png', caption: 'Defect rate per characteristic with 95% Wilson confidence intervals' },
+    sections: [
+      {
+        title: 'The Problem',
+        body: "Two things go wrong with PFMEAs in practice: Occurrence is guessed in a meeting, and the Control Plan drifts away from the FMEA, so a high risk ends up with no control on the floor.",
+      },
+      {
+        title: 'What I Did',
+        steps: [
+          '01 - Computed the defect rate for 9 characteristics across 4 operations (saw, mill, lathe, assembly), with 95% Wilson confidence intervals',
+          '02 - Mapped each rate to an AIAG-VDA Occurrence rating using a documented band table',
+          '03 - Built the PFMEA: failure modes, effects, causes, Severity, Detection, Action Priority, special characteristics',
+          '04 - Built the matching Control Plan: gauge, sample size and frequency, control method, reaction plan',
+          '05 - Wrote check_linkage.py: joins both Excel files on step and characteristic and fails on any orphan risk, orphan control or dropped special characteristic',
         ],
         gallery: [
-          { src: 'images/composite/failure-indices.png', caption: 'Tsai-Wu & Hashin failure index map' },
-          { src: 'images/composite/angle-sweep.png', caption: "Young's modulus Ex vs ply angle θ" },
+          { src: 'images/nexus/process-flow.png', caption: 'Process flow: saw → mill, lathe → assembly' },
         ],
       },
       {
-        title: 'Engineering Theory',
-        body: 'Built on Classical Laminate Theory (Kirchhoff-Love plate kinematics: small deflections, perfect bonding, plane stress per ply). The ABD constitutive system relates force/moment resultants to mid-plane strains and curvatures. Failure criteria: Tsai-Wu (quadratic tensor polynomial) and Hashin 1980 (physically-motivated fiber/matrix splitting modes). Simulated Annealing drives the stacking optimizer - accepts worse solutions probabilistically at high temperature to escape local minima.',
+        title: 'Results',
+        body: "5 High, 1 Medium and 3 Low Action Priority. The top risks were surface roughness at the mill (22.3% out of spec, High) and rod coaxiality at the lathe (12.9%, High, a critical characteristic). The linkage check found 0 orphan risks, 0 orphan controls and 0 special-characteristic mismatches.",
       },
       {
-        title: 'Connection to SAMPE',
-        body: 'The toolkit grew out of the layup code written for the SAMPE fuselage, where a simulated-annealing search explored symmetric, balanced stacking sequences for the design team. I helped write that code; the final layup was chosen by the design side and checked in FEA before cutting prepreg.',
+        title: 'Limits',
+        body: "Only Occurrence is data-driven; Severity and Detection are my judgment. The Control Plan's gauges, sample plans and some spec values are illustrative. Occurrence used the point estimate, where the conservative choice is the upper confidence bound. And full coverage proves every risk has a control on paper, not that the control works.",
+      },
+      {
+        title: 'How It Was Built',
+        body: "Python (pandas, statsmodels, openpyxl), Jupyter and Git. " + "Built with AI coding assistance (Claude Code). I set the scope, chose the methods and standards, checked the outputs and wrote the conclusions.",
       },
     ],
-    skills: ['Classical Lamination Theory', 'Simulated Annealing', 'CalculiX FEA', 'Python', 'NumPy', 'Tsai-Wu Criterion', 'Hashin 1980 Criterion', 'ABD Matrices', 'Navier Series', 'Composites Design'],
+    skills: ['PFMEA (AIAG-VDA)', 'Action Priority', 'Control Plan', 'Special Characteristics', 'Wilson Intervals', 'Python / openpyxl', 'Audit Readiness'],
   },
 
   // ── EXPERIENCE ROLES ──────────────────────────────────
