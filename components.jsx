@@ -111,7 +111,6 @@ function HUDOverlay() {
 // ─────────────────────────────────────────────────────────
 // Nav
 // ─────────────────────────────────────────────────────────
-const RESUME_URL = 'Resume.pdf';
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -152,12 +151,6 @@ function Nav() {
           ))}
         </nav>
         <div className="nav__actions">
-          <a className="btn btn--primary btn--sm" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M6 2v6M6 8L4 6M6 8l2-2M3 10h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            Resume
-          </a>
           <button className="nav__burger" onClick={() => setOpen(!open)} aria-label="Menu">
             <span></span><span></span>
           </button>
@@ -181,7 +174,7 @@ const CS_SKILLS = [
   'pFMEA (AIAG FMEA-4)', 'SPC / Cp/Cpk', '8D Problem Solving',
   'GD&T (ASME Y14.5)', 'RCCA / CAPA', 'MRB Disposition',
   'Python', 'Streamlit', 'ABAQUS FEA', 'Lean Principles',
-  'Prepreg Layup', 'CMM Inspection',
+  'Prepreg Layup', 'CMM Report Review',
 ];
 
 function Hero() {
@@ -223,9 +216,9 @@ function Hero() {
             <p className="cs__bio">
               Hi, I'm <strong>Siddardth Pathipaka</strong>, an M.S. Aerospace Engineering
               graduate (Dec 2025) from <span className="cs__accent">UIUC</span>. I specialize in quality
-              systems, Six Sigma methodology, and composites manufacturing - from{' '}
-              <strong>8D problem-solving that cut nonconformance cycle time by 22%</strong> at
-              Tata Advanced Systems Limited, to building live SPC and pFMEA tools that automate what
+              systems, process control, and composites manufacturing - from{' '}
+              <strong>MRB and root-cause work on GE LEAP and Boeing parts</strong> at
+              Tata Advanced Systems Limited, to building SPC and pFMEA tools that automate what
               engineers do in spreadsheets.
             </p>
 
@@ -273,12 +266,6 @@ function Hero() {
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/>
                   </svg>
-                </a>
-                <a href={RESUME_URL} className="btn btn--primary btn--sm cs__resume-btn" target="_blank" rel="noopener noreferrer">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M3 6h6M6 3v6M6 9l-2-2M6 9l2-2" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/>
-                  </svg>
-                  Resume
                 </a>
                 <a className="btn btn--ghost btn--sm" href="#lab">
                   View My Work
@@ -452,7 +439,7 @@ function CompositeWeave() {
   return (
     <div className="weave" ref={wrapRef} onMouseMove={onMove} aria-hidden="true">
       <div className="weave__chrome">
-        <span className="weave__chrome-id mono">CFRP_LAYUP · LIVE_FEM</span>
+        <span className="weave__chrome-id mono">PREPREG_LAYUP · LIVE_FEM</span>
         <span className="weave__chrome-status mono"><span className="dot dot--green"></span>SOLVING</span>
       </div>
       <svg viewBox="0 0 320 320" className="weave__svg">
@@ -625,31 +612,31 @@ const LAB_PROJECTS = [
   {
     n: '01', tag: 'Competition', detailId: 'lab-sampe',
     title: 'SAMPE Fuselage Competition',
-    role: 'Manufacturing Lead', date: 'Jan–May 2025',
-    metricBits: [['2,700', 'lbf load'], ['38%', 'deflection ↓']],
-    description: '2,700 lbf structural test · 38% deflection reduction. Carbon fiber/epoxy composite fuselage manufactured under autoclave cure with ply-drop optimization.',
+    role: 'Manufacturing: plan, PFMEA, build', date: 'Jan–May 2025',
+    metricBits: [['~2,590', 'lbf peak'], ['0.575"', 'at 1,000 lbf']],
+    description: 'Fiberglass and Nomex sandwich fuselage, prepreg layup and autoclave cure. Carried ~2,590 lbf against a 1,000 lbf requirement, with 0.575 in deflection at the required load.',
     schematic: 'fuselage',
   },
   {
     n: '02', tag: 'Competition', detailId: 'lab-esvc',
     title: 'Electric Solar Vehicle Championship',
-    role: 'Manufacturing Lead', date: '2019–2023',
-    metricBits: [['7th', 'national'], ['180.43', '/200 cross pad']],
-    description: '7th place nationally · 180.43/200 Cross Pad · zero mechanical failures across 3.5-year build cycle.',
+    role: 'Brakes & Suspension Lead', date: '2019–2023',
+    metricBits: [['7th', 'national'], ['608.8', 'points']],
+    description: 'Single-seat solar electric car: dual-circuit hydraulic disc brakes and double-wishbone suspension, built and checked to the rulebook. Team placed 7th nationally (608.8 pts).',
     schematic: 'vehicle',
   },
   {
     n: '03', tag: 'Academic', detailId: 'lab-borosilicate',
     title: 'Borosilicate Glass-Ceramic Composites',
-    role: 'Project Lead', date: 'Aug 2022–Apr 2023',
-    metricBits: [['24.49%', 'hardness'], ['24', 'formulations']],
-    description: '24.49% hardness improvement (548→698.66 HV) across 24 powder-metallurgy formulations with sintering-cycle DOE.',
+    role: 'Undergraduate Thesis (team)', date: 'Aug 2022–Apr 2023',
+    metricBits: [['+27%', 'hardness'], ['8', 'compositions']],
+    description: '10 wt% alumina raised hardness to 699 HV, 27% above the 549 HV glass baseline, across 8 powder-metallurgy compositions.',
     schematic: 'specimen',
   },
   {
     n: '04', tag: 'Academic', detailId: 'lab-aero',
     title: 'SAE Aero Design Challenge',
-    role: 'Team Lead', date: 'Mar 2022–Oct 2022',
+    role: 'CFD & Build Planning', date: 'Mar 2022–Oct 2022',
     metricBits: [['85%', 'CFD ↔ theory'], ['92"', 'tapered wing']],
     description: '85% CFD-to-theory correlation · 92" tapered wing validated in ANSYS Fluent against Prandtl lifting-line.',
     schematic: 'wing',
@@ -782,9 +769,9 @@ function Schematic({ kind, index }) {
               <path d={`M${x} 90 L${x} 115 M${x-5} 110 L${x} 117 L${x+5} 110`}/>
             </g>
           ))}
-          <text x="240" y="80" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">2,700 LBF · UNIFORM</text>
-          <text x="240" y="240" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">CFRP / 12-PLY / AUTOCLAVE</text>
-          {hl('body') && <text x="240" y="165" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(52,211,153,0.9)" letterSpacing="1">38% DEFLECTION ↓</text>}
+          <text x="240" y="80" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">~2,590 LBF PEAK · 3-PT BEND</text>
+          <text x="240" y="240" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">E-GLASS / NOMEX / AUTOCLAVE</text>
+          {hl('body') && <text x="240" y="165" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(52,211,153,0.9)" letterSpacing="1">0.575 IN @ 1,000 LBF</text>}
         </g>
       )}
       {kind === 'vehicle' && (
@@ -803,17 +790,17 @@ function Schematic({ kind, index }) {
               <circle cx={w.cx} cy="220" r="10" fill="none" stroke="rgba(16,185,129,0.4)"/>
             </g>
           ))}
-          {hl('solar') && <text x="240" y="145" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(52,211,153,0.9)">SOLAR ARRAY · 160W</text>}
-          <text x="240" y="50" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">RANK 7 / 200 PT · CROSS PAD</text>
-          <text x="240" y="288" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">CHASSIS · CFRP MONOCOQUE</text>
+          {hl('solar') && <text x="240" y="145" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="8" fill="rgba(52,211,153,0.9)">SOLAR ARRAY</text>}
+          <text x="240" y="50" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">7TH NATIONAL · 608.8 PTS</text>
+          <text x="240" y="288" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">CHASSIS · 4130 CHROMOLY</text>
         </g>
       )}
       {kind === 'specimen' && (
         <g className="schem-anim">
-          {Array.from({length: 24}).map((_, i) => {
-            const c = i % 6, r = Math.floor(i / 6);
-            const x = 100 + c * 50, y = 80 + r * 50;
-            const intensity = (i / 24);
+          {Array.from({length: 8}).map((_, i) => {
+            const c = i % 4, r = Math.floor(i / 4);
+            const x = 135 + c * 55, y = 110 + r * 55;
+            const intensity = (i / 8);
             const isHl = hl(`cell-${i}`);
             return (
               <g key={i} {...hProps(`cell-${i}`)}>
@@ -821,12 +808,11 @@ function Schematic({ kind, index }) {
                       fill={isHl ? `rgba(16,185,129,${0.3 + intensity * 0.4})` : `rgba(16,185,129,${0.05 + intensity * 0.35})`}
                       stroke={isHl ? '#34d399' : 'rgba(16,185,129,0.5)'} strokeWidth={isHl ? 1.2 : 0.7}/>
                 <text x={x+18} y={y+22} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(255,255,255,0.45)">{String(i+1).padStart(2,'0')}</text>
-                {isHl && <text x={x+18} y={y+33} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(52,211,153,0.9)">{Math.round(548 + (i/23)*151)} HV</text>}
               </g>
             );
           })}
-          <text x="240" y="60" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">FORMULATION MATRIX · 24×</text>
-          <text x="240" y="300" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">548 → 698.66 HV · 24.49%</text>
+          <text x="240" y="60" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">COMPOSITION MATRIX · 8×</text>
+          <text x="240" y="300" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">549 → 699 HV · +27%</text>
         </g>
       )}
       {kind === 'wing' && (
@@ -843,7 +829,6 @@ function Schematic({ kind, index }) {
             <path key={i} d={`M30 ${y} Q 240 ${y - 8} 450 ${y - 4}`} fill="none"
                   stroke={`rgba(52,211,153,${0.4 - i*0.05})`} strokeWidth="0.8" className={`stream stream-${i}`}/>
           ))}
-          {hl('wing') && <text x="240" y="132" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(52,211,153,0.9)">CL=1.24 · α=4.2°</text>}
           <text x="240" y="60" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2">CL · 92" SPAN · TAPERED</text>
           <text x="240" y="290" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="rgba(16,185,129,0.7)" letterSpacing="2">CFD ↔ THEORY · 85% MATCH</text>
         </g>
@@ -1072,43 +1057,43 @@ const ROLES = [
     type: 'Industry', title: 'Quality Assurance & MRB Intern', detailId: 'exp-tata',
     company: 'Tata Advanced Systems Limited', dates: 'Oct 2022 - Mar 2023',
     location: 'Hyderabad, India',
-    summary: 'Audited CMM inspection records for 450+ flight-critical components on GE Aerospace LEAP engine programs. Introduced 8D problem-solving to MRB disposition, reducing NCR cycle time by 22% and defect rate from 15% to under 3%.',
-    metricBits: [['450+', 'parts inspected'], ['22%', 'cycle time ↓'], ['15→3%', 'defect rate'], ['$3,000', 'scrap avoided']],
+    summary: "Reviewed 450+ CMM inspection reports for GE LEAP and Boeing parts and supported MRB disposition. On a root-cause team, traced one CNC machine's recurring ~15% dimensional failures to tool wear; a machine-specific tool-change interval brought it to about 3%.",
+    metricBits: [['450+', 'reports reviewed'], ['15→3%', 'one machine'], ['2 mo', 'QC'], ['4 mo', 'MRB']],
     timeline: [
-      { t: 'M 1-3', label: 'QC Inspector · CMM inspection' },
-      { t: 'M 4', label: '8D rolled out · top-3 defect modes' },
-      { t: 'M 5', label: 'SPC corrective actions · defect rate ↓' },
-      { t: 'M 6', label: 'MRB interim coordination with QM' },
+      { t: 'QC', label: 'CMM reports checked against drawings' },
+      { t: 'NCR', label: 'Out-of-tolerance parts written up for MRB' },
+      { t: 'RCA', label: 'Root-cause team · CNC tool wear' },
+      { t: 'MRB', label: 'NCR, 8D and CAPA records · audit prep' },
     ],
-    skills: ['CMM Inspection', 'GD&T', '8D Problem Solving', 'pFMEA', 'SPC', 'AS9100'],
+    skills: ['Inspection Reports', 'GD&T', 'NCR / MRB', '8D / CAPA', 'Xbar-R', 'AS9100'],
   },
   {
     type: 'Research', title: 'Graduate Research Assistant', detailId: 'exp-beckman',
     company: 'Beckman Institute, UIUC', dates: 'Aug 2024 - Dec 2024',
     location: 'Urbana, IL',
-    summary: 'Developed and validated an out-of-autoclave cure method using frontal polymerization, reducing composite processing from 8+ hours to under 5 minutes. Predicted cure behavior within 10% velocity accuracy through computational modeling.',
-    metricBits: [['8h → 5m', 'cure cycle'], ['40%', 'oscillation ↓'], ['10%', 'velocity accuracy'], ['3°C', 'temp. error']],
+    summary: 'Modelled frontal polymerization, a rapid cure method for thermoset composites. Compared three cure-front models in the MOOSE framework; the level-set model tracked the front on coarser meshes, avoiding multi-day runs.',
+    metricBits: [['3', 'models compared'], ['MOOSE', 'FE framework'], ['Level-set', 'front tracking'], ['FP', 'rapid cure']],
     timeline: [
-      { t: 'M 01', label: 'Literature review · FP fundamentals' },
-      { t: 'M 03', label: 'MOOSE model development' },
-      { t: 'M 05', label: 'Level-set validation vs experiment' },
-      { t: 'M 08', label: 'Specimen fabrication + characterization' },
+      { t: '01', label: 'Literature review · FP fundamentals' },
+      { t: '02', label: 'Three cure-front models in MOOSE' },
+      { t: '03', label: 'Level-set vs finer-mesh models' },
+      { t: '04', label: 'Findings write-up' },
     ],
-    skills: ['Frontal Polymerization', 'MOOSE Framework', 'Level-Set Methods', 'Composite Fabrication', 'Python'],
+    skills: ['Frontal Polymerization', 'MOOSE Framework', 'Level-Set Methods', 'FE Modeling', 'Python'],
   },
   {
     type: 'Industry', title: 'Manufacturing Intern', detailId: 'exp-eqic',
     company: 'EQIC Dies & Moulds Engineers', dates: 'Jun–Aug 2022',
     location: 'Hyderabad, India',
-    summary: 'Owned tool-room workflow on a 12-stage progressive die for HPDC housings. Verified GD&T to ±0.02 mm on CMM, ran process FMEAs on EDM and grinding, mapped the entire route with cycle-time evidence.',
-    metricBits: [['12-stage', 'die workflow'], ['±0.02mm', 'GD&T tol'], ['HPDC', 'process'], ['3', 'FMEAs run']],
+    summary: 'Followed one HPDC die (work order 10521) through 12 stages, from design review and BOM to trial-0 and a 3D scan against CAD. Most time on the floor in inspection and assembly; learned from the shop\'s BOMs, GD&T drawings, CMM reports and scan data.',
+    metricBits: [['12-stage', 'die workflow'], ['HPDC', 'process'], ['100k', 'shot warranty'], ['3 mo', 'internship']],
     timeline: [
-      { t: 'WK 01', label: 'Tool-room walk · scope' },
-      { t: 'WK 04', label: 'CMM verification protocol' },
-      { t: 'WK 08', label: 'EDM/grind FMEA closed' },
-      { t: 'WK 10', label: 'Handoff · cycle-time atlas' },
+      { t: 'DESIGN', label: 'Drawing review · BOM' },
+      { t: 'MACHINE', label: 'Milling, CNC, heat treat, grinding, EDM' },
+      { t: 'INSPECT', label: 'Inspection & assembly · blue matching' },
+      { t: 'TRIAL', label: 'Trial-0 · 3D scan vs CAD' },
     ],
-    skills: ['HPDC', 'EDM', 'CMM', 'Grinding', 'pFMEA', 'SolidWorks'],
+    skills: ['HPDC', 'Process Mapping', 'GD&T Drawings', 'CMM Reports', 'EDM', 'Heat Treatment'],
   },
 ];
 
@@ -1209,10 +1194,10 @@ function ExperienceRow({ type, title, company, dates, location, summary, metricB
 // Skills & Credentials - featured Six Sigma badge
 // ─────────────────────────────────────────────────────────
 const SKILL_GROUPS = [
-  { title: 'Quality Engineering', items: ['pFMEA (AIAG FMEA-4)', 'SPC', '8D Problem Solving', 'RCCA', 'CAPA', 'CMM Inspection', 'GD&T (ASME Y14.5)', 'First Article Inspection', 'MRB Disposition'] },
-  { title: 'Process & Manufacturing', items: ['Lean Principles', 'Prepreg Layup & Autoclave', 'Cure Cycle Development', 'Out-of-Autoclave Methods', 'Powder Metallurgy', 'CNC Machining', 'Wire/Sinker EDM', 'HPDC Process'] },
-  { title: 'Software & Simulation', items: ['Python', 'Streamlit', 'ABAQUS FEA', 'Classical Lamination Theory', 'ANSYS Fluent', 'SolidWorks', 'MATLAB', 'AutoCAD'] },
-  { title: 'Standards', items: ['AIAG FMEA-4', 'AIAG SPC 4th Ed', 'AS9100', 'AS9102 FAIR', 'ASME Y14.5', 'ASTM E384'] },
+  { title: 'Quality Engineering', items: ['pFMEA (AIAG FMEA-4)', 'SPC', '8D Problem Solving', 'RCCA', 'CAPA', 'CMM Report Review', 'GD&T (ASME Y14.5)', 'MRB Disposition'] },
+  { title: 'Process & Manufacturing', items: ['Lean Principles', 'Prepreg Layup & Autoclave', 'Vacuum Bagging & Leak Checks', 'Out-of-Autoclave Methods', 'Powder Metallurgy', 'Process Mapping', 'Hydraulic Brakes & Suspension'] },
+  { title: 'Software & Simulation', items: ['Python', 'Streamlit', 'ABAQUS FEA', 'Classical Lamination Theory', 'ANSYS Fluent', 'SolidWorks', 'CATIA', 'MATLAB'] },
+  { title: 'Standards', items: ['AIAG FMEA-4', 'AIAG SPC 4th Ed', 'AS9100', 'ASME Y14.5', 'ASTM E384'] },
 ];
 
 function SkillsSection({ medallionStyle }) {
@@ -1287,7 +1272,7 @@ function SixSigmaBadge({ medallionStyle }) {
           <p className="cert-card__org mono">Council for Six Sigma Certification</p>
           <h3 className="cert-card__title">Six Sigma Green Belt</h3>
           <p className="cert-card__desc">
-            Certified in DMAIC project leadership, statistical process control, root-cause and
+            Certified in DMAIC, statistical process control, root-cause and
             corrective-action methodology, and the AIAG FMEA-4 framework. The methodology behind
             every metric on this page.
           </p>
